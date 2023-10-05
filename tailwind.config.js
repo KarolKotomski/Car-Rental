@@ -9,18 +9,24 @@ module.exports = {
 			lg: "1024px",
 			xl: "1280px",
 			"2xl": "1440px",
-    },
-    
-    container: {
-      center: true,
-    },
-    
+		},
+
+		container: {
+			center: true,
+			padding: "1rem",
+		},
+
 		extend: {
 			colors: {
 				orange: "#ff4d30",
 				gray: "#2d2d2d",
 				gray2: "#706f7b",
 				gray3: "#ECECEC",
+			},
+
+			backgroundImage: {
+				hero: "url('images/hero/hero-bg.png')",
+				heroCar: "url('images/hero/main-car.png')",
 			},
 		},
 	},
