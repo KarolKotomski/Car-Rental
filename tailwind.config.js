@@ -13,7 +13,10 @@ module.exports = {
 
 		container: {
 			center: true,
-			padding: "1rem",
+			padding: {
+				DEFAULT: "1rem",
+				lg: "2rem",
+			},
 		},
 
 		extend: {
@@ -26,7 +29,6 @@ module.exports = {
 
 			backgroundImage: {
 				hero: "url('images/hero/hero-bg.png')",
-				heroCar: "url('images/hero/main-car.png')",
 			},
 		},
 	},
