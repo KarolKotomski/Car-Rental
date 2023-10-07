@@ -17,7 +17,7 @@ const Hero = () => {
 							flexible pick-up options and much more.
 						</p>
 					</div>
-					<div className='font-medium flex flex-wrap gap-3 justify-center'>
+					<div className='font-medium flex gap-3 justify-center flex-wrap xs:flex-nowrap'>
 						<button className='bg-orange py-4 px-7 rounded text-white flex gap-1 items-center w-fit'>
 							Book Ride{" "}
 							<img
