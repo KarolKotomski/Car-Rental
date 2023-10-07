@@ -5,7 +5,7 @@ import heroCar from "../images/hero/main-car.png";
 const Hero = () => {
 	return (
 		<div className='md:bg-hero md:bg-no-repeat md:bg-right-top'>
-			<div className='container pt-28 flex'>
+			<div className='container pt-36 flex'>
 				<div className='flex flex-col py-4 items-center md:max-w-md md:items-start'>
 					<div className="flex flex-col items-center md:items-start">
 						<h4 className='text-2xl font-bold'>Plan your trip now</h4>
@@ -18,7 +18,7 @@ const Hero = () => {
 						</p>
 					</div>
 					<div className='font-medium flex gap-3 justify-center flex-wrap xs:flex-nowrap'>
-						<button className='bg-orange py-4 px-7 rounded text-white flex gap-1 items-center w-fit'>
+						<button className='bg-orange py-4 px-7 rounded text-white flex gap-1 items-center min-w-[163px]'>
 							Book Ride{" "}
 							<img
 								className='inline-block w-6'
@@ -26,7 +26,7 @@ const Hero = () => {
 								alt='check mark sign'
 							/>
 						</button>
-						<button className='bg-black text-white py-4 px-7 rounded flex gap-1 items-center w-fit'>
+						<button className='bg-black text-white py-4 px-7 rounded flex gap-1 items-center min-w-[163px]'>
 							Learn More{" "}
 							<img
 								className='inline-block w-4'
@@ -37,7 +37,7 @@ const Hero = () => {
 					</div>
 				</div>
 				<div className='hidden md:flex md:items-end'>
-					<img src={heroCar} alt='volkswagen car picture' />
+					<img src={heroCar} alt='volkswagen car' />
 				</div>
 			</div>
 		</div>
