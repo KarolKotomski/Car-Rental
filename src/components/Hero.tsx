@@ -1,4 +1,3 @@
-import React from "react";
 import checkmark from "../icons/checkmark.png";
 import arrowRight from "../icons/arrow-right.png";
 import heroCar from "../images/hero/main-car.png";
@@ -18,7 +17,7 @@ const Hero = () => {
 							flexible pick-up options and much more.
 						</p>
 					</div>
-					<div className='font-medium flex flex-col gap-3 md:flex-row'>
+					<div className='font-medium flex flex-wrap gap-3 justify-center'>
 						<button className='bg-orange py-4 px-7 rounded text-white flex gap-1 items-center w-fit'>
 							Book Ride{" "}
 							<img

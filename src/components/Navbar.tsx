@@ -1,6 +1,5 @@
-import React from "react";
 import logo from "../images/logo/logo.png";
-import hamburger from "../icons/hamburger.svg"
+import hamburgerIcon from "../icons/hamburger.svg"
 
 const Navbar = () => {
 	return (
@@ -22,7 +21,7 @@ const Navbar = () => {
 					<button className='hidden lg:block bg-orange py-3 px-6 text-white rounded'>
 						Register
 					</button>
-					<img className='lg:hidden w-6' src={hamburger} alt="hamburger menu" />
+					<img className='lg:hidden w-6' src={hamburgerIcon} alt="hamburger menu" />
 				</div>
 			</div>
 		</nav>
