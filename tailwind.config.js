@@ -25,10 +25,11 @@ module.exports = {
 				gray: "#2d2d2d",
 				gray2: "#706f7b",
 				gray3: "#ECECEC",
+				gray4: "#f8f8f8",
 			},
 
 			backgroundImage: {
-				hero: "url('images/hero/hero-bg.png')",
+				booking: "url('images/book-car/book-bg.png')",
 			},
 		},
 	},

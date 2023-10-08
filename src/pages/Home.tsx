@@ -1,5 +1,5 @@
-import React from "react";
 import Hero from "../components/Hero";
+import Booking from "../components/Booking";
 
 const Home = () => {
 	return (
@@ -7,7 +7,9 @@ const Home = () => {
 			<section>
 				<Hero />
 			</section>
-			<section>Booking</section>
+			<section>
+				<Booking />
+			</section>
 			<section>Plan</section>
 			<section>Pick</section>
 			<section>Plan</section>
