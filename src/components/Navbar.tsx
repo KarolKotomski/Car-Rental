@@ -3,7 +3,7 @@ import logo from "../images/logo/logo.png";
 const Navbar = () => {
 	return (
 		<nav>
-			<div className='container h-28 absolute flex justify-between items-center left-0 right-0 font-medium z-50'>
+			<div className='container h-28 absolute flex justify-between items-center left-0 right-0 font-medium z-20'>
 				<div className='w-36'>
 					<img src={logo} alt='logo' />
 				</div>

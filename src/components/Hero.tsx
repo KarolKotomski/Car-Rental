@@ -9,7 +9,7 @@ const Hero = () => {
 				<div className='absolute z-10 right-0 top-0'>
 					<img src={heroBackground} alt='city skyscrapers' />
 				</div>
-				<div className='container pt-36 flex'>
+				<div className='container pt-36 pb-12 flex'>
 					<div className='flex flex-col py-4 items-center md:max-w-md md:items-start z-30'>
 						<div className='flex flex-col items-center md:items-start'>
 							<h4 className='text-2xl font-bold'>Plan your trip now</h4>
