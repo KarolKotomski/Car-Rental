@@ -1,7 +1,8 @@
 import Hero from "../components/Hero";
 import Booking from "../components/Booking";
-import { Plan } from "../components/Plan";
+import Plan from "../components/Plan";
 import Banner1 from "../components/Banner1";
+import Choose from "../components/Choose";
 
 const Home = () => {
 	return (
@@ -19,7 +20,9 @@ const Home = () => {
 			<section>
 				<Banner1 />
 			</section>
-			<section>Choose</section>
+			<section>
+				<Choose />
+			</section>
 			<section>Testimonials</section>
 			<section>Faq</section>
 			<section>Download</section>

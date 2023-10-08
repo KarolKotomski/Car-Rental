@@ -1,5 +1,3 @@
-import React from "react";
-
 const Banner1 = () => {
 	return (
 		<div className='bg-gray'>
