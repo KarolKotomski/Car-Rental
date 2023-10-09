@@ -31,6 +31,8 @@ module.exports = {
 			backgroundImage: {
 				booking: "url('images/book-car/book-bg.png')",
 				choose: "url('images/chooseUs/bg.png')",
+				download: "url('images/banners/bg02.png')",
+				
 			},
 		},
 	},

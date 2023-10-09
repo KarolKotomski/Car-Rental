@@ -5,6 +5,7 @@ import Banner1 from "../components/Banner1";
 import Choose from "../components/Choose";
 import Testimonials from "../components/Testimonials";
 import Faq from "../components/Faq";
+import Download from "../components/Download";
 
 const Home = () => {
 	return (
@@ -31,7 +32,9 @@ const Home = () => {
 			<section>
 				<Faq />
 			</section>
-			<section>Download</section>
+			<section>
+				<Download />
+			</section>
 		</>
 	);
 };

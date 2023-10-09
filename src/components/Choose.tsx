@@ -10,7 +10,7 @@ const Choose = () => {
 		<div className="bg-choose bg-no-repeat bg-left-bottom">
 			<div className='container'>
 				<div className='py-10 flex justify-center'>
-					<img className='w-full' src={car} alt='three cars' />
+					<img className='w-[80%]' src={car} alt='three cars' />
 				</div>
 				<div className='flex flex-col lg:flex-row'>
 					<div className='flex flex-col items-center justify-center lg:w-fit'>
