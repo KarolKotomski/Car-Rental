@@ -4,6 +4,7 @@ import Plan from "../components/Plan";
 import Banner1 from "../components/Banner1";
 import Choose from "../components/Choose";
 import Testimonials from "../components/Testimonials";
+import Faq from "../components/Faq";
 
 const Home = () => {
 	return (
@@ -27,7 +28,9 @@ const Home = () => {
 			<section>
 				<Testimonials />
 			</section>
-			<section>Faq</section>
+			<section>
+				<Faq />
+			</section>
 			<section>Download</section>
 		</>
 	);
