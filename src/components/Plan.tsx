@@ -9,7 +9,7 @@ const Plan = () => {
 			<div className='container'>
 				<div className='text-center font-semibold'>
 					<h3 className='text-2xl'>Plan your trip now</h3>
-					<h2 className='text-5xl pt-5 pb-10'>Quick & easy car rental</h2>
+					<h2 className='text-5xl py-5'>Quick & easy car rental</h2>
 				</div>
 				<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 px-5 py-5'>
 					<PlanSection
