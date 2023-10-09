@@ -7,7 +7,7 @@ const Navbar = () => {
 				<div className='w-36'>
 					<img src={logo} alt='logo' />
 				</div>
-				<ul className='hidden lg:flex gap-6 '>
+				<ul className='hidden lg:flex gap-6 px-5'>
 					<li>Home</li>
 					<li>About</li>
 					<li>Vehicles</li>
@@ -15,7 +15,7 @@ const Navbar = () => {
 					<li>Our Team</li>
 					<li>Contact</li>
 				</ul>
-				<div className='flex gap-5'>
+				<div className='flex gap-3'>
 					<button className='hidden lg:block py-3 px-6 rounded'>Sign In</button>
 					<button className='hidden lg:block bg-orange py-3 px-6 text-white rounded'>
 						Register

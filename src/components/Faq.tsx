@@ -15,7 +15,7 @@ const Faq = () => {
 				<div className='w-full lg:max-w-[50rem] mx-auto'>
 					<div className='p-5 flex flex-col'>
 						<div className='flex items-center justify-between gap-5 p-5 bg-white cursor-pointer'>
-							<div className='text-lg text-black'>
+							<div className='text-lg text-black font-medium'>
 								1. What is special about comparing rental car deals?
 							</div>
 							<div className='w-6'>

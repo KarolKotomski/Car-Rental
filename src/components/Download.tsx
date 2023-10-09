@@ -12,7 +12,7 @@ const Download = () => {
 						fingertips with our new car rental app!
 					</p>
 				</div>
-				<div className='flex flex-col justify-center items-center gap-8 p-5 lg:justify-start lg:pl-0 xs:flex-row'>
+				<div className='flex flex-col justify-center items-center gap-3 p-5 lg:justify-start lg:pl-0 xs:flex-row'>
 					<div className='w-52 cursor-pointer'>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
