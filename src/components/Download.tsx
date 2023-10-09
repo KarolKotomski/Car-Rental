@@ -1,7 +1,7 @@
 const Download = () => {
 	return (
 		<div className='lg:bg-download bg-top bg-no-repeat bg-gray4 '>
-			<div className='container py-10'>
+			<div className='container py-20'>
 				<div className='text-center lg:text-left lg:max-w-[43rem]'>
 					<h2 className='text-5xl py-5 font-semibold'>
 						Download our app to get most out of it

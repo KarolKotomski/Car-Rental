@@ -5,7 +5,7 @@ import PlanSection from "./PlanSection";
 
 const Plan = () => {
 	return (
-		<div className='bg-gray4 py-10 flex flex-col items-center'>
+		<div className='bg-gray4 py-20 flex flex-col items-center'>
 			<div className='container'>
 				<div className='text-center font-semibold'>
 					<h3 className='text-2xl'>Plan your trip now</h3>

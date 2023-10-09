@@ -1,6 +1,6 @@
 const Faq = () => {
 	return (
-		<div className='container py-10'>
+		<div className='container py-20'>
 			<div className='text-center'>
 				<h3 className='text-2xl font-semibold'>FAQ</h3>
 				<h2 className='text-5xl py-5 font-semibold'>
@@ -11,7 +11,7 @@ const Faq = () => {
 					website: Answers to common concerns and inquiries.
 				</p>
 			</div>
-			<div className='w-full lg:max-w-[70%] mx-auto'>
+			<div className='w-full lg:max-w-[65%] mx-auto'>
 				<div className='p-5 flex flex-col'>
 					<div className='flex items-center justify-between gap-5 p-5 bg-orange'>
 						<div className='text-lg text-white'>
