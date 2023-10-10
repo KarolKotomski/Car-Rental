@@ -28,7 +28,7 @@ const Choose = () => {
 							ultimate renting experience, so don't miss out on your chance to
 							save big.
 						</p>
-						<button className='bg-orange text-white py-4 px-7 rounded flex gap-1 items-center min-w-[163px] my-5'>
+						<button className='bg-orange text-white font-medium py-4 px-7 rounded flex gap-1 items-center min-w-[163px] my-5'>
 							Find details
 							<img
 								className='inline-block w-4'

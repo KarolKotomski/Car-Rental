@@ -4,7 +4,7 @@ const Download = () => {
 			<div className='container py-20'>
 				<div className='text-center lg:text-left lg:max-w-[43rem]'>
 					<h2 className='text-5xl py-5 font-semibold'>
-						Download our app to get most out of it
+						Download our <span className="text-orange">App</span> to get most out of it
 					</h2>
 					<p className='py-3 text-gray2'>
 						Have you ever dreamed of spontaneous trips, exploring new places,
