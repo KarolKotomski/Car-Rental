@@ -22,13 +22,13 @@ const Testimonials = () => {
 							The booking was easy and the rental rates were very affordable."'
 						picture={johnDoe}
 						name='John Doe'
-						city='Warsaw'
+						city='Warsaw, Poland'
 					/>
 					<TestimonialsPost
 						opinion='"The car was in great condition and made our trip even better. Highly recommend for this car rental website!"'
 						picture={janeDoe}
 						name='Jane Doe'
-						city='Cracow'
+						city='Cracow, Poland'
 					/>
 				</div>
 			</div>

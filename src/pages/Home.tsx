@@ -6,6 +6,7 @@ import Choose from "../components/Choose";
 import Testimonials from "../components/Testimonials";
 import Faq from "../components/Faq";
 import Download from "../components/Download";
+import Pick from "../components/Pick";
 
 const Home = () => {
 	return (
@@ -19,7 +20,9 @@ const Home = () => {
 			<section>
 				<Plan />
 			</section>
-			<section>Pick</section>
+			<section>
+				<Pick />
+			</section>
 			<section>
 				<Banner1 />
 			</section>

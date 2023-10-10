@@ -6,7 +6,7 @@ const Banner1 = () => {
 					Save <span className="text-orange">big</span> with our cheap car rental!
 				</h2>
 				<p className='text-2xl pt-8'>
-					Top Airports - Local Suppliers -
+					Popular models - Insurance included -
 					<span className='text-orange'> 24/7 </span>
 					Support
 				</p>
