@@ -4,7 +4,7 @@ interface Props {
 	option: string;
 }
 
-const BookingSection = ({ icon, label, option }: Props) => {
+const BookingUnit = ({ icon, label, option }: Props) => {
 	return (
 		<form className='flex flex-col'>
 			<div className='flex items-center gap-2'>
@@ -30,4 +30,4 @@ const BookingSection = ({ icon, label, option }: Props) => {
 	);
 };
 
-export default BookingSection;
+export default BookingUnit;

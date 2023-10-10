@@ -4,7 +4,7 @@ interface Props {
 	paragraph: string;
 }
 
-const PlanSection = ({ picture, header, paragraph }: Props) => {
+const PlanUnit = ({ picture, header, paragraph }: Props) => {
 	return (
 		<>
 			<div className='flex flex-col items-center justify-start px-6'>
@@ -18,4 +18,4 @@ const PlanSection = ({ picture, header, paragraph }: Props) => {
 	);
 };
 
-export default PlanSection;
+export default PlanUnit;

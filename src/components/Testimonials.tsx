@@ -1,7 +1,6 @@
 import johnDoe from "../images/team/5.png";
 import janeDoe from "../images/team/6.png";
-
-import TestimonialsProfile from "./TestimonialsProfile";
+import TestimonialsPost from "./TestimonialsPost";
 
 const Testimonials = () => {
 	return (
@@ -18,14 +17,14 @@ const Testimonials = () => {
 					</p>
 				</div>
 				<div className='flex flex-col justify-center gap-10 items-center lg:p-10 lg:flex-row'>
-					<TestimonialsProfile
+					<TestimonialsPost
 						opinion='"We rented a car from this website and had an amazing experience!
 							The booking was easy and the rental rates were very affordable."'
 						picture={johnDoe}
 						name='John Doe'
 						city='Warsaw'
 					/>
-					<TestimonialsProfile
+					<TestimonialsPost
 						opinion='"The car was in great condition and made our trip even better. Highly recommend for this car rental website!"'
 						picture={janeDoe}
 						name='Jane Doe'

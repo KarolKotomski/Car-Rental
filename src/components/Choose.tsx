@@ -3,7 +3,7 @@ import icon1 from "../images/chooseUs/icon1.png";
 import icon2 from "../images/chooseUs/icon2.png";
 import icon3 from "../images/chooseUs/icon3.png";
 import arrowRight from "../icons/arrow-right.png";
-import ChooseSection from "./ChooseSection";
+import ChooseUnit from "./ChooseUnit";
 
 const Choose = () => {
 	return (
@@ -38,17 +38,17 @@ const Choose = () => {
 						</button>
 					</div>
 					<div className='py-10 flex flex-col gap-10'>
-						<ChooseSection
+						<ChooseUnit
 							picture={icon1}
 							header='Cross Country Drive'
 							paragraph='Take your driving experience to the next level with our top-notch vehicles for your cross-country adventures.'
 						/>
-						<ChooseSection
+						<ChooseUnit
 							picture={icon2}
 							header='All Inclusive Pricing'
 							paragraph='Get everything you need in one convenient, transparent price with our all-inclusive pricing policy.'
 						/>
-						<ChooseSection
+						<ChooseUnit
 							picture={icon3}
 							header='No Hidden Charges'
 							paragraph='Enjoy peace of mind with our no hidden charges policy. We believe in transparent and honest pricing.'

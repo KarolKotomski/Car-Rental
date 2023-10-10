@@ -4,7 +4,7 @@ interface Props {
 	paragraph: string;
 }
 
-const ChooseSection = ({ picture, header, paragraph }: Props) => {
+const ChooseUnit = ({ picture, header, paragraph }: Props) => {
 	return (
 		<>
 			<div className='px-6 flex flex-col items-center sm:flex-row'>
@@ -20,4 +20,4 @@ const ChooseSection = ({ picture, header, paragraph }: Props) => {
 	);
 };
 
-export default ChooseSection;
+export default ChooseUnit;

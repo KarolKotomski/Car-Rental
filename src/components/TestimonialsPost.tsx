@@ -5,7 +5,7 @@ interface Props {
 	city: string;
 }
 
-const TestimonialsProfile = ({ opinion, picture, name, city }: Props) => {
+const TestimonialsPost = ({ opinion, picture, name, city }: Props) => {
 	return (
 		<div className='flex flex-col p-4 sm:p-10 bg-white w-full min-h-[20rem]'>
 			<div className='flex pb-5'>
@@ -40,4 +40,4 @@ const TestimonialsProfile = ({ opinion, picture, name, city }: Props) => {
 	);
 };
 
-export default TestimonialsProfile;
+export default TestimonialsPost;
