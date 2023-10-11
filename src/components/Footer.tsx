@@ -91,7 +91,7 @@ const Footer = () => {
 							<h5 className='text-2xl font-medium text-center pb-2'>
 								SUBSCRIPTION
 							</h5>
-							<p className='text-center pb-2'>
+							<p className='text-center p-2'>
 								Subscribe for latest news & updates
 							</p>
 						</div>

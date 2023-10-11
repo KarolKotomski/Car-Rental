@@ -13,7 +13,7 @@ const Pick = () => {
 					</p>
 				</div>
 
-				<div className="lg:grid lg:grid-cols-4">
+				<div className="pt-10 lg:grid lg:grid-cols-4">
 					<div className='flex flex-col gap-3'>
 						<button className='bg-gray3 px-6 py-4 text-xl font-medium text-left'>
 							Audi A1 S-Line
