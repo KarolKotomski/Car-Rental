@@ -2,7 +2,7 @@ const Footer = () => {
 	return (
 		<footer>
 			<div className='container py-20'>
-				<div className='grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4'>
+				<div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4'>
 					<div className='flex flex-col items-center'>
 						<div className='flex flex-col justify-center items-center'>
 							<h5 className='text-2xl font-medium'>
@@ -100,7 +100,7 @@ const Footer = () => {
 								type='e-mail'
 								minLength={5}
 								maxLength={40}
-								placeholder='enter your email address'
+								placeholder='enter your email'
 								className='bg-gray3 py-4 px-7 text-center placeholder-gray2'
 							/>
 							<button className='bg-orange text-white font-medium py-4 px-7 rounded'>

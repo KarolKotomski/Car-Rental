@@ -6,7 +6,7 @@ interface Props {
 
 const BookingUnit = ({ icon, label, options }: Props) => {
 	return (
-		<div className='p-5 rounded-md'>
+		<div className='p-3 rounded-md'>
 			<form className='flex flex-col'>
 				<div className='flex items-center gap-2'>
 					<div className='w-6'>

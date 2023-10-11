@@ -72,7 +72,7 @@ const Pick = () => {
 								<div className='w-1/2 border-r-2 border-gray2'>Brand:</div>
 								<div className='w-1/2'>Audi</div>
                             </div>
-                            <button className="bg-orange text-white py-2 px-4 text-xl rounded mt-5">RESERVE NOW</button>
+                            <button className="bg-orange text-white py-2 px-4 text-xl rounded mt-5">Reserve now</button>
 						</div>
 					</div>
 				</div>
