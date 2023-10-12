@@ -3,8 +3,8 @@ const Banner1 = () => {
     <div className="bg-gray">
       <div className="container py-[4rem] text-center text-white">
         <h2 className="text-5xl font-bold">
-          Save <span className="text-orange">big</span> with our cheap car
-          rental!
+          Save <span className="text-orange">big</span> with our car
+          rental
         </h2>
         <p className="pt-8 text-2xl">
           Popular models - Insurance included -

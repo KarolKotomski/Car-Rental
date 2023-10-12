@@ -20,7 +20,7 @@ const Footer = () => {
               href="tel:123-456-789"
               className="transition-all hover:text-orange"
             >
-              <div className="flex w-fit justify-center gap-2 py-2 ">
+              <div className="flex w-fit justify-center gap-2 py-2">
                 <div className="w-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -80,12 +80,22 @@ const Footer = () => {
           <div className="flex flex-col">
             <div className="flex flex-col items-center justify-center">
               <h5 className="pb-2 text-center text-2xl font-medium">COMPANY</h5>
-              <ul className="p-2 text-center">
-                <li className="pb-2">How we work</li>
-                <li className="pb-2">New York</li>
-                <li className="pb-2">Careers</li>
-                <li className="pb-2">Mobile</li>
-                <li className="pb-2">Blog</li>
+              <ul className="p-2 text-center ">
+                <li className="cursor-pointer pb-2 transition-all hover:text-orange">
+                  How we work
+                </li>
+                <li className="cursor-pointer pb-2 transition-all hover:text-orange">
+                  New York
+                </li>
+                <li className="cursor-pointer pb-2 transition-all hover:text-orange">
+                  Careers
+                </li>
+                <li className="cursor-pointer pb-2 transition-all hover:text-orange">
+                  Mobile
+                </li>
+                <li className="cursor-pointer pb-2 transition-all hover:text-orange">
+                  Blog
+                </li>
               </ul>
             </div>
           </div>
