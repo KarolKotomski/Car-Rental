@@ -1,4 +1,3 @@
-import { url } from "inspector";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -122,7 +121,7 @@ const Footer = () => {
                 Subscribe for latest news & updates
               </p>
             </div>
-            <div className="flex flex-col gap-3 py-5">
+            <div className="flex flex-col gap-3 py-5 m-2">
               <input
                 type="e-mail"
                 minLength={5}
