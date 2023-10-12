@@ -14,7 +14,7 @@ const Footer = () => {
               </p>
             </div>
             <a href="tel:123-456-789">
-              <div className="flex w-fit justify-center gap-3 py-2">
+              <div className="flex w-fit justify-center gap-2 py-2 transition-all hover:text-orange">
                 <div className="w-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ const Footer = () => {
                 </div>
               </div>
             </a>
-            <div className="flex justify-center gap-3 p-2">
+            <div className="flex justify-center gap-2 p-2 transition-all hover:text-orange">
               <div className="w-6">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -53,12 +53,14 @@ const Footer = () => {
               </div>
               <div>
                 <a href="mailto:your@email.com">
-                  <p className="font-medium">your@email.com</p>
+                  <p className="font-medium ">your@email.com</p>
                 </a>
               </div>
             </div>
             <div className="p-2 text-center">
-              <p>Design by XpeedStudio</p>
+              <p className="cursor-pointer transition-all hover:text-orange">
+                Design by XpeedStudio
+              </p>
             </div>
           </div>
 
@@ -105,7 +107,7 @@ const Footer = () => {
                 placeholder="your email"
                 className="bg-gray3 px-7 py-4 text-center placeholder-gray2"
               />
-              <button className="rounded bg-orange px-7 py-4 font-medium text-white">
+              <button className="rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80">
                 Submit
               </button>
             </div>

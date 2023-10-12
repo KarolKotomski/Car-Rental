@@ -16,6 +16,7 @@ const Download = () => {
         <div className="flex flex-col items-center justify-center gap-3 p-5 xs:flex-row lg:justify-start lg:pl-0">
           <div className="w-52 cursor-pointer">
             <svg
+              className="transition-all hover:opacity-80"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 227 69"
@@ -28,6 +29,7 @@ const Download = () => {
           </div>
           <div className="w-52 cursor-pointer">
             <svg
+              className="transition-all hover:opacity-80"
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
               viewBox="0 0 231 69"

@@ -28,7 +28,6 @@ const BookingUnit = ({ icon, label, options }: Props) => {
             {options}
           </select>
         </div>
-        s
       </form>
     </div>
   );

@@ -38,7 +38,7 @@ const Booking = () => {
               options="Audi A1"
             />
             <div className="m-3 flex items-end justify-center">
-              <button className="h-10 w-full rounded bg-orange font-medium text-white">
+              <button className="h-10 w-full rounded bg-orange font-medium text-white transition-all hover:opacity-80">
                 Search
               </button>
             </div>
