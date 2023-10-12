@@ -4,49 +4,49 @@ import calendar from "../icons/calendar.png";
 import BookingUnit from "./BookingUnit";
 
 const Booking = () => {
-	return (
-		<div className='bg-gray4 py-20'>
-			<div className='container'>
-				<div className="p-10 bg-booking bg-white bg-cover bg-no-repeat relative z-10 rounded-lg">
-					<div className='text-2xl font-bold pl-3'>
-						<h2>Book a car</h2>
-					</div>
-					<div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
-						<BookingUnit
-							icon={carIcon}
-							label='Select your car'
-							options='Audi A1'
-						/>
-						<BookingUnit
-							icon={location}
-							label='Pick-up location'
-							options='Audi A1'
-						/>
-						<BookingUnit
-							icon={location}
-							label='Drop-off location'
-							options='Audi A1'
-						/>
-						<BookingUnit
-							icon={calendar}
-							label='Pick-up date'
-							options='Audi A1'
-						/>
-						<BookingUnit
-							icon={calendar}
-							label='Drop-off date'
-							options='Audi A1'
-						/>
-						<div className='flex justify-center items-end m-3'>
-							<button className='bg-orange text-white font-medium w-full h-10 rounded'>
-								Search
-							</button>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	);
+  return (
+    <div className="bg-gray4 py-20">
+      <div className="container">
+        <div className="relative z-10 rounded-lg bg-white bg-booking bg-cover bg-no-repeat p-10">
+          <div className="pl-3 text-2xl font-bold">
+            <h2>Book a car</h2>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <BookingUnit
+              icon={carIcon}
+              label="Select your car"
+              options="Audi A1"
+            />
+            <BookingUnit
+              icon={location}
+              label="Pick-up location"
+              options="Audi A1"
+            />
+            <BookingUnit
+              icon={location}
+              label="Drop-off location"
+              options="Audi A1"
+            />
+            <BookingUnit
+              icon={calendar}
+              label="Pick-up date"
+              options="Audi A1"
+            />
+            <BookingUnit
+              icon={calendar}
+              label="Drop-off date"
+              options="Audi A1"
+            />
+            <div className="m-3 flex items-end justify-center">
+              <button className="h-10 w-full rounded bg-orange font-medium text-white">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Booking;
