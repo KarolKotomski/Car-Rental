@@ -1,3 +1,6 @@
+import { url } from "inspector";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer>
@@ -13,8 +16,11 @@ const Footer = () => {
                 have the perfect car to meet your requirements.
               </p>
             </div>
-            <a href="tel:123-456-789">
-              <div className="flex w-fit justify-center gap-2 py-2 transition-all hover:text-orange">
+            <a
+              href="tel:123-456-789"
+              className="transition-all hover:text-orange"
+            >
+              <div className="flex w-fit justify-center gap-2 py-2 ">
                 <div className="w-6">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -36,31 +42,38 @@ const Footer = () => {
                 </div>
               </div>
             </a>
-            <div className="flex justify-center gap-2 p-2 transition-all hover:text-orange">
-              <div className="w-6">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
-                  <path d="M3 7l9 6l9 -6"></path>
-                </svg>
-              </div>
-              <div>
-                <a href="mailto:your@email.com">
+            <a
+              href="mailto:your@email.com"
+              className="transition-all hover:text-orange"
+            >
+              <div className="flex justify-center gap-2 p-2">
+                <div className="w-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
+                    <path d="M3 7l9 6l9 -6"></path>
+                  </svg>
+                </div>
+                <div>
                   <p className="font-medium ">your@email.com</p>
-                </a>
+                </div>
               </div>
-            </div>
+            </a>
             <div className="p-2 text-center">
-              <p className="cursor-pointer transition-all hover:text-orange">
-                Design by XpeedStudio
-              </p>
+              <Link to="https://xpeedstudio.com/">
+                <a href="https://xpeedstudio.com/" target="_blank">
+                  <p className="transition-all hover:text-orange">
+                    Design by XpeedStudio
+                  </p>
+                </a>
+              </Link>
             </div>
           </div>
 
