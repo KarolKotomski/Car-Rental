@@ -1,4 +1,5 @@
 import AboutCompany from "../components/AboutCompany";
+import Banner2 from "../components/Banner2";
 import Header from "../components/Header";
 
 const About = () => {
@@ -6,6 +7,7 @@ const About = () => {
     <section>
       <Header />
       <AboutCompany />
+      <Banner2 />
     </section>
   );
 };
