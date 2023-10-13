@@ -1,7 +1,11 @@
+import Header from "../components/Header";
+
 const About = () => {
   return (
-    <section>About</section>
-  )
-}
+    <section>
+      <Header />
+    </section>
+  );
+};
 
-export default About
+export default About;

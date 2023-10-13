@@ -33,6 +33,7 @@ module.exports = {
 				choose: "url('images/chooseUs/bg.png')",
 				download: "url('images/banners/bg02.png')",
 				faq: "url('images/faq/car.png')",
+				header: "url('images/hero/heroes-bg.png')",
 			},
 		},
 	},
