@@ -14,7 +14,7 @@ const Pick = () => {
         </div>
 
         <div className="pt-10 lg:grid lg:grid-cols-4">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 justify-between">
             <button className="bg-gray3 px-6 py-4 text-left text-xl font-medium">
               Audi A1 S-Line
             </button>
@@ -35,7 +35,7 @@ const Pick = () => {
             </button>
           </div>
 
-          <div className="flex flex-col items-center gap-5 py-10 md:flex-row lg:col-span-3 lg:justify-end lg:gap-0">
+          <div className="flex flex-col items-center gap-5 py-10 md:flex-row lg:col-span-3 lg:justify-end lg:gap-0 lg:py-0">
             <div className="flex justify-center px-5 lg:w-full xl:h-full">
               <img src={carPicture} alt="selected car" />
             </div>

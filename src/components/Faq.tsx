@@ -1,6 +1,6 @@
 const Faq = () => {
   return (
-    <div className="bg-faq bg-left-bottom bg-no-repeat">
+    <div className="bg-faq bg-left-bottom bg-no-repeat mb-20">
       <div className="container py-20">
         <div className="z-10 text-center">
           <h3 className="text-2xl font-semibold">FAQ</h3>

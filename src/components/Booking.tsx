@@ -5,7 +5,7 @@ import BookingUnit from "./BookingUnit";
 
 const Booking = () => {
   return (
-    <div className="bg-gray4 py-20">
+    <div className="bg-gray4 pt-20">
       <div className="container">
         <div className="relative z-10 rounded-lg bg-white bg-booking bg-cover bg-no-repeat p-10">
           <div className="pl-3 text-2xl font-bold">
