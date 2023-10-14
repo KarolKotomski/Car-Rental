@@ -106,7 +106,7 @@ const Footer = () => {
               <h5 className="pb-2 text-center text-2xl font-medium">
                 WORKING HOURS
               </h5>
-              <ul className="p-2 text-center">
+              <ul className="p-2 text-center whitespace-nowrap">
                 <li className="pb-2">Mon - Fri: 9:00AM - 9:00PM</li>
                 <li className="pb-2">Sat: 9:00AM - 7:00PM</li>
                 <li className="pb-2">Sun: Closed</li>

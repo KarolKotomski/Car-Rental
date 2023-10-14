@@ -1,6 +1,6 @@
 const Banner2 = () => {
   return (
-    <div className=" bg-gray bg-banner bg-cover bg-bottom bg-no-repeat bg-blend-overlay">
+    <div className="bg-gray bg-banner bg-fill bg-bottom bg-no-repeat bg-blend-screen">
       <div className="container py-[4rem] text-center text-white">
         <div className="flex flex-col gap-5">
           <div>

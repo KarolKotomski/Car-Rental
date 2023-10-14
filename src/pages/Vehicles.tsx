@@ -5,7 +5,7 @@ import VehiclesList from "../components/VehiclesList";
 const Vehicles = () => {
   return (
     <section>
-      <Header name="About" />
+      <Header name="Vehicles" />
       <VehiclesList />
       <Banner2 />
     </section>
