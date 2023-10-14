@@ -1,6 +1,6 @@
 const Banner2 = () => {
   return (
-    <div className="bg-gray bg-banner bg-blend-screen bg-no-repeat bg-bottom">
+    <div className=" bg-gray bg-banner bg-cover bg-bottom bg-no-repeat bg-blend-overlay">
       <div className="container py-[4rem] text-center text-white">
         <div className="flex flex-col gap-5">
           <div>
@@ -9,7 +9,7 @@ const Banner2 = () => {
             </h2>
           </div>
 
-          <div className="flex items-center justify-center gap-3 text-3xl font-medium text-orange whitespace-nowrap">
+          <div className="flex items-center justify-center gap-3 whitespace-nowrap text-3xl font-medium text-orange">
             <div className="w-10">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

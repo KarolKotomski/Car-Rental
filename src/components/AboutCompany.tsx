@@ -21,7 +21,7 @@ const AboutCompany = () => {
         </p>
         <div className="flex flex-col justify-center gap-12 pt-6 xs:flex-row lg:justify-start">
           <div className="flex flex-col items-center gap-2">
-            <img src={icon1} alt="car icon" />
+            <img className="h-[39px]" src={icon1} alt="car icon" />
             <p className="text-5xl font-bold">20</p>
             <p className="text-gray2">Car types</p>
           </div>
