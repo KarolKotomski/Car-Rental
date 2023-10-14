@@ -43,7 +43,7 @@ const Footer = () => {
                 </div>
               </a>
               <a
-                href="mailto:your@email.com"
+                href="mailto:email@example.com"
                 className="transition-all hover:text-orange"
               >
                 <div className="flex justify-center gap-2">
@@ -62,7 +62,7 @@ const Footer = () => {
                     </svg>
                   </div>
                   <div>
-                    <p className="font-medium ">your@email.com</p>
+                    <p className="font-medium ">email@example.com</p>
                   </div>
                 </div>
               </a>
@@ -106,7 +106,7 @@ const Footer = () => {
               <h5 className="pb-2 text-center text-2xl font-medium">
                 WORKING HOURS
               </h5>
-              <ul className="p-2 text-center whitespace-nowrap">
+              <ul className="whitespace-nowrap p-2 text-center">
                 <li className="pb-2">Mon - Fri: 9:00AM - 9:00PM</li>
                 <li className="pb-2">Sat: 9:00AM - 7:00PM</li>
                 <li className="pb-2">Sun: Closed</li>

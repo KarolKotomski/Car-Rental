@@ -32,6 +32,7 @@ module.exports = {
 				banner: "url('images/banners/book-banner.png')",
 				booking: "url('images/book-car/book-bg.png')",
 				choose: "url('images/chooseUs/bg.png')",
+				contact: "url('images/banners/bg-contact.png')",
 				download: "url('images/banners/bg02.png')",
 				faq: "url('images/faq/car.png')",
 				header: "url('images/hero/heroes-bg.png')",

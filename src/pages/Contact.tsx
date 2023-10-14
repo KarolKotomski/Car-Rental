@@ -1,7 +1,15 @@
+import AdditionalInfo from "../components/AdditionalInfo";
+import Banner2 from "../components/Banner2";
+import Header from "../components/Header";
+
 const Contact = () => {
   return (
-    <section>Contact</section>
-  )
-}
+    <section>
+      <Header name="Contact" />
+      <AdditionalInfo />
+      <Banner2 />
+    </section>
+  );
+};
 
-export default Contact
+export default Contact;
