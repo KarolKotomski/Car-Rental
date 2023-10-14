@@ -1,12 +1,10 @@
 const Banner2 = () => {
   return (
-    <div className="bg-gray bg-banner bg-fill bg-bottom bg-no-repeat bg-blend-screen">
-      <div className="container py-[4rem] text-center text-white">
-        <div className="flex flex-col gap-5">
-          <div>
-            <h2 className="text-5xl font-bold">
-              Book a car by getting in touch with us
-            </h2>
+    <div className="bg-fill bg-gray bg-banner bg-bottom bg-no-repeat bg-blend-screen">
+      <div className="container py-28 text-center text-white">
+        <div className="flex flex-col justify-center gap-5 lg:flex-row">
+          <div className="text-4xl font-bold">
+            <h2>Book a car by getting in touch with us</h2>
           </div>
 
           <div className="flex items-center justify-center gap-3 whitespace-nowrap text-3xl font-medium text-orange">
