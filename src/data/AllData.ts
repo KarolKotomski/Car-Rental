@@ -1,15 +1,15 @@
-import audi1 from "../images/audi-box.png";
-import audi2 from "../images/audia1.jpg";
-import golf1 from "../images/golf6-box.png";
-import golf2 from "../images/golf6.jpg";
-import camry1 from "../images/toyota-box.png";
-import camry2 from "../images/toyotacamry.jpg";
-import bmw1 from "../images/bmw-box.png";
-import bmw2 from "../images/bmw320.jpg";
-import mercedes1 from "../images/benz-box.png";
-import mercedes2 from "../images/benz.jpg";
-import cc1 from "../images/passat-box.png";
-import cc2 from "../images/passatcc.png";
+import audi1 from "../images/cars-big/audi-box.png";
+import audi2 from "../images/cars-big/audia1.jpg";
+import golf1 from "../images/cars-big/golf6-box.png";
+import golf2 from "../images/cars-big/golf6.jpg";
+import camry1 from "../images/cars-big/toyota-box.png";
+import camry2 from "../images/cars-big/toyotacamry.jpg";
+import bmw1 from "../images/cars-big/bmw-box.png";
+import bmw2 from "../images/cars-big/bmw320.jpg";
+import mercedes1 from "../images/cars-big/benz-box.png";
+import mercedes2 from "../images/cars-big/benz.jpg";
+import cc1 from "../images/cars-big/passat-box.png";
+import cc2 from "../images/cars-big/passatcc.png";
 
 import diaz from "../images/team/2.png";
 import miller from "../images/team/1.png";
@@ -28,7 +28,8 @@ export const vehicles = [
     transmission: "manual",
     fuel: "Diesel",
     cost: "$45",
-    images: [audi1, audi2],
+    image1: audi1,
+    image2: audi2,
   },
 
   {
@@ -40,7 +41,8 @@ export const vehicles = [
     transmission: "automatic",
     fuel: "Diesel",
     cost: "$37",
-    images: [golf1, golf2],
+    image1: golf1,
+    image2: golf2,
   },
 
   {
@@ -52,7 +54,8 @@ export const vehicles = [
     transmission: "manual",
     fuel: "Petrol",
     cost: "$30",
-    images: [camry1, camry2],
+    image1: camry1,
+    image2: camry2,
   },
   {
     id: 4,
@@ -63,7 +66,8 @@ export const vehicles = [
     transmission: "automatic",
     fuel: "Diesel",
     cost: "$35",
-    images: [bmw1, bmw2],
+    image1: bmw1,
+    image2: bmw2,
   },
   {
     id: 5,
@@ -74,7 +78,8 @@ export const vehicles = [
     transmission: "automatic",
     fuel: "Diesel",
     cost: "$50",
-    images: [mercedes1, mercedes2],
+    image1: mercedes1,
+    image2: mercedes2,
   },
   {
     id: 6,
@@ -85,7 +90,8 @@ export const vehicles = [
     transmission: "automatic",
     fuel: "Petrol",
     cost: "$25",
-    images: [cc1, cc2],
+    image1: cc1,
+    image2: cc2,
   },
 ];
 
@@ -94,36 +100,36 @@ export const people = [
     id: 1,
     name: "Michael Diaz",
     position: "Business Owner",
-    image: { diaz },
+    image: diaz,
   },
   {
     id: 2,
     name: "Luke Miller",
     position: "Salesman",
-    image: { miller },
+    image: miller,
   },
   {
     id: 3,
     name: "Briana Ross",
     position: "Photographer",
-    image: { ross },
+    image: ross,
   },
   {
     id: 4,
     name: "Lauren Rivera",
     position: "Car Detailist",
-    image: { rivera },
+    image: rivera,
   },
   {
     id: 5,
     name: "Martin Rizz",
     position: "Mechanic",
-    image: { rizz },
+    image: rizz,
   },
   {
     id: 6,
     name: "Caterine Hunt",
     position: "Manager",
-    image: { hunt },
+    image: hunt,
   },
 ];
