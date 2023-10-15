@@ -128,7 +128,7 @@ const Footer = () => {
                 type="e-mail"
                 minLength={5}
                 maxLength={40}
-                placeholder="your email"
+                placeholder="Your email"
                 className="bg-gray3 px-7 py-4 text-center placeholder-gray2"
               />
               <button className="rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80">

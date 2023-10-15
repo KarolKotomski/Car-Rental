@@ -2,7 +2,7 @@ import johnDoe from "../images/team/5.png";
 import janeDoe from "../images/team/6.png";
 import TestimonialsPost from "./TestimonialsPost";
 
-const Testimonials = () => {
+const TestimonialsList = () => {
   return (
     <div className="bg-gray4">
       <div className="container py-20">
@@ -36,4 +36,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default TestimonialsList;

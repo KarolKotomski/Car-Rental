@@ -13,7 +13,7 @@ const AdditionalInfo = () => {
               years of experience.
             </p>
           </div>
-          <div className="flex flex-col items-start gap-3">
+          <div className="flex flex-col items-start gap-5">
             <a
               href="tel:123-456-789"
               className="transition-all hover:text-orange"
@@ -116,8 +116,8 @@ const AdditionalInfo = () => {
               Tell us about it<span className="text-orange">*</span>
             </label>
             <textarea
-              className="h-72 w-full resize-none bg-gray3 px-5 py-2"
-              placeholder="Write here.."
+              className="h-36 w-full resize-none bg-gray3 px-5 py-2"
+              placeholder="write here.."
               minLength={3}
               maxLength={250}
             ></textarea>
@@ -137,7 +137,7 @@ const AdditionalInfo = () => {
               <path d="M21 9v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10"></path>
               <path d="M3 19l6 -6"></path>
               <path d="M15 13l6 6"></path>
-            </svg>{" "}
+            </svg>
             Send Message
           </button>
         </form>
