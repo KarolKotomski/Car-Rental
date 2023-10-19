@@ -22,7 +22,7 @@ const VehiclesModel = ({
   return (
     <div className="flex flex-col border border-[#d5d5d5]">
       <div>
-        <img src={image} alt="car" />
+        <img className="object-cover h-full w-full" src={image} alt="car" />
       </div>
       <div className="flex flex-col gap-6 px-7 py-5">
         <div className="flex justify-between">
@@ -120,7 +120,7 @@ const VehiclesModel = ({
         </div>
 
         <div className="mx-auto w-full border-t border-t-[#d5d5d5] pt-5">
-          <button className="w-full rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80">
+          <button className="w-full rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80 shadow-lg shadow-orangeShadow">
             Book Ride
           </button>
         </div>

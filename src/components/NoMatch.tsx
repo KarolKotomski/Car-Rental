@@ -13,7 +13,7 @@ const NoMatch = () => {
       </div>
       <div>
         <Link to="/">
-          <button className="rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80">
+          <button className="rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80 shadow-lg shadow-orangeShadow">
             Back to Home
           </button>
         </Link>

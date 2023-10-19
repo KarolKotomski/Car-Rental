@@ -28,7 +28,7 @@ const Choose = () => {
               ultimate renting experience, so don't miss out on your chance to
               save big.
             </p>
-            <button className="my-5 flex min-w-[163px] items-center gap-1 rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80">
+            <button className="my-5 flex min-w-[163px] items-center gap-1 rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80 shadow-lg shadow-orangeShadow">
               Find details
               <img
                 className="inline-block w-4"

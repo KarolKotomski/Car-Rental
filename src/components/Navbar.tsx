@@ -36,7 +36,7 @@ const Navbar = () => {
           <button className="my-auto hidden h-fit rounded transition-colors hover:text-orange lg:block">
             Sign In
           </button>
-          <button className="hidden rounded bg-orange px-6 py-3 text-white transition-all duration-300 ease-in-out hover:opacity-80 lg:block">
+          <button className="hidden rounded bg-orange px-6 py-3 text-white transition-all duration-300 ease-in-out hover:opacity-80 lg:block shadow-lg shadow-orangeShadow">
             Register
           </button>
           <div className="my-auto w-10 cursor-pointer text-black transition-all duration-300 ease-in-out hover:text-orange lg:hidden">
