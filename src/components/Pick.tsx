@@ -36,7 +36,7 @@ const Pick = () => {
                 key={index}
                 onClick={() => handleButtonClick(vehicle.id)}
               >
-                {vehicle.brand} {vehicle.model}{" "}
+                {vehicle.brand} {vehicle.model}
                 {vehicle.line ? vehicle.line : ""}
               </button>
             ))}
