@@ -1,14 +1,15 @@
 import { vehicles } from "../data/AllData";
 import { useState } from "react";
 
-
 const Pick = () => {
   const [selectedVehicle, setSelectedVehicle] = useState(vehicles[0]);
+  const [activeButtonId, setActiveButtonId] = useState(vehicles[0].id);
 
   const handleButtonClick = (id: number) => {
     const selected = vehicles.find((vehicle) => vehicle.id === id);
     if (selected) {
       setSelectedVehicle(selected);
+      setActiveButtonId(id);
     }
   };
   return (
@@ -27,22 +28,30 @@ const Pick = () => {
           <div className="flex flex-col justify-between gap-3">
             {vehicles.map((vehicle, index) => (
               <button
-                className="bg-gray3 px-6 py-4 text-left text-xl font-medium hover:bg-orange hover:text-white whitespace-nowrap"
-                key={index} onClick={()=> handleButtonClick(vehicle.id)}
+                className={`whitespace-nowrap px-6 py-4 text-left text-xl font-medium hover:bg-orange hover:text-white ${
+                  activeButtonId === vehicle.id
+                    ? "bg-orange text-white"
+                    : "bg-gray3"
+                }`}
+                key={index}
+                onClick={() => handleButtonClick(vehicle.id)}
               >
-                {vehicle.brand} {vehicle.model} {vehicle.line ? vehicle.line : ""}
+                {vehicle.brand} {vehicle.model}{" "}
+                {vehicle.line ? vehicle.line : ""}
               </button>
             ))}
           </div>
 
-          <div className="flex flex-col items-center gap-5 py-10 md:flex-row md:justify-between md:w-full lg:justify-end lg:gap-0 lg:py-0">
+          <div className="flex flex-col items-center gap-5 py-10 md:w-full md:flex-row md:justify-between lg:justify-end lg:gap-0 lg:py-0">
             <div className="flex justify-center px-5 lg:w-full lg:px-10 2xl:px-16">
-              <img src={selectedVehicle.image2} alt="selected car"/>
+              <img src={selectedVehicle.image2} alt="selected car" />
             </div>
 
             <div className="flex min-w-[250px] flex-col">
               <div className="bg-orange px-4 py-1 text-center text-lg text-white">
-                <span className="text-2xl font-medium">{selectedVehicle.cost}</span>
+                <span className="text-2xl font-medium">
+                  {selectedVehicle.cost}
+                </span>
                 / day
               </div>
               <div className="flex border-x-2 border-b-2 border-gray2 px-1 py-2 text-center">
