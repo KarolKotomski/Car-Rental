@@ -6,7 +6,7 @@ interface Props {
   door: string;
   transmission: string;
   fuel: string;
-  line: string;
+  line?: string;
 }
 
 const VehiclesModel = ({
@@ -20,9 +20,9 @@ const VehiclesModel = ({
   line,
 }: Props) => {
   return (
-    <div className="flex flex-col border border-[#d5d5d5]">
+    <div className="flex flex-col border border-[#d5d5d5] justify-between">
       <div className="h-1/2">
-        <img className="object-cover h-full w-full" src={image} alt="car" />
+        <img className="h-full w-full object-cover" src={image} alt="car" />
       </div>
       <div className="flex flex-col gap-6 px-7 py-5">
         <div className="flex justify-between">
@@ -105,9 +105,11 @@ const VehiclesModel = ({
           </div>
         </div>
         <div className="grid grid-cols-1 gap-3">
-          <div>
-            Line: <span className="font-medium">"{line}"</span>
-          </div>
+         
+            <div>
+              Line: <span className="font-medium">{line ? line : "standard"}</span>
+            </div>
+         
           <div>
             Doors: <span className="font-medium">"{door}"</span>
           </div>
@@ -120,7 +122,7 @@ const VehiclesModel = ({
         </div>
 
         <div className="mx-auto w-full border-t border-t-[#d5d5d5] pt-5">
-          <button className="w-full rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80 shadow-lg shadow-orangeShadow">
+          <button className="w-full rounded bg-orange px-7 py-4 font-medium text-white shadow-lg shadow-orangeShadow transition-all hover:opacity-80">
             Book Ride
           </button>
         </div>

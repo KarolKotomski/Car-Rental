@@ -14,7 +14,7 @@ const VehiclesList = () => {
             door={car.doors}
             transmission={car.transmission}
             fuel={car.fuel}
-            line={car.fuel}
+            line={car.line}
           />
         ))}
       </div>
