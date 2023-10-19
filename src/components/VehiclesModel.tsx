@@ -20,7 +20,7 @@ const VehiclesModel = ({
   line,
 }: Props) => {
   return (
-    <div className="flex flex-col border border-[#d5d5d5] justify-between">
+    <div className="flex flex-col justify-between border border-[#d5d5d5]">
       <div className="h-1/2">
         <img className="h-full w-full object-cover" src={image} alt="car" />
       </div>
@@ -99,17 +99,17 @@ const VehiclesModel = ({
             </div>
           </div>
 
-          <div>
+          <div className="pl-5">
             <p className="text-2xl font-medium">{price}</p>
             <p>per day</p>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-3">
-         
-            <div>
-              Line: <span className="font-medium">{line ? line : "standard"}</span>
-            </div>
-         
+          <div>
+            Line:
+            <span className="font-medium">{line ? line : "standard"}</span>
+          </div>
+
           <div>
             Doors: <span className="font-medium">"{door}"</span>
           </div>
