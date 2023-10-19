@@ -21,7 +21,7 @@ const VehiclesModel = ({
 }: Props) => {
   return (
     <div className="flex flex-col border border-[#d5d5d5]">
-      <div>
+      <div className="h-1/2">
         <img className="object-cover h-full w-full" src={image} alt="car" />
       </div>
       <div className="flex flex-col gap-6 px-7 py-5">
