@@ -27,9 +27,9 @@ const Footer = () => {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
                       <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"></path>
                       <path d="M15 7a2 2 0 0 1 2 2"></path>
@@ -53,9 +53,9 @@ const Footer = () => {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     >
                       <path d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"></path>
                       <path d="M3 7l9 6l9 -6"></path>
@@ -67,12 +67,10 @@ const Footer = () => {
                 </div>
               </a>
               <div className="text-center">
-                <Link to="https://xpeedstudio.com/">
-                  <a href="https://xpeedstudio.com/" target="_blank">
-                    <p className="transition-all hover:text-orange">
-                      Design by XpeedStudio
-                    </p>
-                  </a>
+                <Link to="https://xpeedstudio.com/" target="_blank">
+                  <p className="transition-all hover:text-orange">
+                    Design by XpeedStudio
+                  </p>
                 </Link>
               </div>
             </div>
@@ -131,7 +129,7 @@ const Footer = () => {
                 placeholder="Your email"
                 className="bg-gray3 px-7 py-4 text-center placeholder-gray2"
               />
-              <button className="rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80 shadow-lg shadow-orangeShadow">
+              <button className="rounded bg-orange px-7 py-4 font-medium text-white shadow-lg shadow-orangeShadow transition-all hover:opacity-80">
                 Submit
               </button>
             </div>
