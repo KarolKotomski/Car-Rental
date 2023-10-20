@@ -4,9 +4,10 @@ import { faq } from "../data/AllData";
 const Faq = () => {
   const [activeButtonId, setActiveButtonId] = useState(0);
 
-  const handleButtonClick = (id: number) => {
-    const selected = faq.find((item) => item.id === id);
-    if (selected) {
+  const toggle = (id: number) => {
+    if (activeButtonId === id) {
+      return setActiveButtonId(0);
+    } else {
       setActiveButtonId(id);
     }
   };
@@ -26,15 +27,14 @@ const Faq = () => {
         </div>
         <div className="mx-auto w-full lg:max-w-[50rem]">
           {faq.map((item, id) => (
-            <div
-              className="flex flex-col p-5"
-              key={id}
-              onClick={() => handleButtonClick(item.id)}
-            >
+            <div className="flex flex-col" key={id}>
               <div
-                className={`flex cursor-pointer items-center justify-between gap-5 p-5 ${
-                  activeButtonId === item.id ? "bg-orange text-white" : "bg-white"
+                className={`flex cursor-pointer items-center justify-between gap-5 px-8 py-5 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1.0)] ${
+                  activeButtonId === item.id
+                    ? "bg-orange text-white"
+                    : "bg-white"
                 }`}
+                onClick={() => toggle(item.id)}
               >
                 <div className="text-lg font-medium">
                   {item.id}. {item.question}
@@ -57,7 +57,13 @@ const Faq = () => {
                 </div>
               </div>
 
-              <div className="cursor-pointer bg-white p-5 text-gray2">
+              <div
+                className={`mx-8 cursor-pointer bg-white text-gray2 transition-all duration-[500ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] ${
+                  activeButtonId === item.id
+                    ? "overflow-auto py-5"
+                    : "max-h-0 overflow-hidden"
+                }`}
+              >
                 {item.answer}
               </div>
             </div>
