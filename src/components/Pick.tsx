@@ -37,7 +37,7 @@ const Pick = () => {
                 onClick={() => handleButtonClick(vehicle.id)}
               >
                 {vehicle.brand} {vehicle.model}
-                {vehicle.line ? vehicle.line : ""}
+                {vehicle.line ? " " + vehicle.line : ""}
               </button>
             ))}
           </div>
@@ -50,7 +50,7 @@ const Pick = () => {
             <div className="flex min-w-[250px] flex-col">
               <div className="bg-orange px-4 py-1 text-center text-lg text-white">
                 <span className="text-2xl font-medium">
-                  {selectedVehicle.cost}
+                  {selectedVehicle.cost + " "}
                 </span>
                 / day
               </div>
