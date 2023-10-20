@@ -20,7 +20,7 @@ const VehiclesModel = ({
   line,
 }: Props) => {
   return (
-    <div className="flex flex-col justify-between border border-[#d5d5d5]">
+    <div className="flex flex-col justify-between border border-[#d5d5d5] shadow-lg">
       <div className="h-1/2">
         <img className="h-full w-full object-cover" src={image} alt="car" />
       </div>

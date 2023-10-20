@@ -28,7 +28,7 @@ const Pick = () => {
           <div className="flex flex-col justify-between gap-3">
             {vehicles.map((vehicle, index) => (
               <button
-                className={`whitespace-nowrap px-6 py-4 text-left text-xl font-medium hover:bg-orange hover:text-white ${
+                className={`whitespace-nowrap px-6 py-4 text-left text-xl font-medium transition-colors duration-300 hover:bg-orange hover:text-white ${
                   activeButtonId === vehicle.id
                     ? "bg-orange text-white"
                     : "bg-gray3"
@@ -84,7 +84,7 @@ const Pick = () => {
                 <div className="w-1/2 border-r-2 border-gray2">Fuel:</div>
                 <div className="w-1/2">{selectedVehicle.fuel}</div>
               </div>
-              <button className="mt-5 rounded bg-orange px-4 py-2 text-xl text-white shadow-lg shadow-orangeShadow transition-all hover:opacity-80">
+              <button className="mt-5 rounded bg-orange px-4 py-2 text-xl text-white shadow-lg shadow-orangeShadow transition-all duration-300 hover:opacity-80">
                 Book now
               </button>
             </div>

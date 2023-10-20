@@ -14,7 +14,7 @@ const Download = () => {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center gap-3 p-5 xs:flex-row lg:justify-start lg:pl-0">
-          <div className="w-52 cursor-pointer">
+          <div className="w-52 cursor-pointer shadow-xl">
             <svg
               className="transition-all hover:opacity-80"
               xmlns="http://www.w3.org/2000/svg"
@@ -27,7 +27,7 @@ const Download = () => {
               ></image>
             </svg>
           </div>
-          <div className="w-52 cursor-pointer">
+          <div className="w-52 cursor-pointer shadow-xl">
             <svg
               className="transition-all hover:opacity-80"
               xmlns="http://www.w3.org/2000/svg"

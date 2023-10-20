@@ -6,7 +6,7 @@ interface Props {
 
 const CrewMember = ({ image, name, position }: Props) => {
   return (
-    <div className="flex flex-col items-center p-5 text-center">
+    <div className="flex flex-col items-center p-5 text-center shadow-md">
       <div className="bg-gray3">
         <img src={image} alt="person photography" />
       </div>

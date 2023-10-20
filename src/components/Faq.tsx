@@ -44,7 +44,7 @@ const Faq = () => {
                 </div>
                 <div className="w-6">
                   <svg
-                    className={`${
+                    className={`h-6 w-6 ${
                       activeButtonId === item.id ? "text-white" : "text-black"
                     }`}
                     xmlns="http://www.w3.org/2000/svg"

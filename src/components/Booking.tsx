@@ -7,7 +7,7 @@ const Booking = () => {
   return (
     <div className="bg-gray4 pt-20">
       <div className="container">
-        <div className="relative z-10 rounded-lg bg-white bg-booking bg-cover bg-no-repeat p-10">
+        <div className="relative z-10 rounded-lg bg-white bg-booking bg-cover bg-no-repeat p-10 shadow-xl">
           <div className="pl-3 text-2xl font-bold">
             <h2>Book a car</h2>
           </div>
@@ -38,7 +38,7 @@ const Booking = () => {
               options="Audi A1"
             />
             <div className="m-3 flex items-end justify-center">
-              <button className="h-10 w-full rounded bg-orange font-medium text-white transition-all hover:opacity-80 shadow-lg shadow-orangeShadow">
+              <button className="h-10 w-full rounded bg-orange font-medium text-white transition-all duration-300 ease-in-out hover:opacity-80 shadow-lg shadow-orangeShadow">
                 Search
               </button>
             </div>
