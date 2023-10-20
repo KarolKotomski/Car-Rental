@@ -42,6 +42,7 @@ const Booking = () => {
                 Search
               </button>
             </div>
+            <p className="p-3"><span className="text-orange font-medium text-lg">*</span> - field required</p>
           </div>
         </div>
       </div>

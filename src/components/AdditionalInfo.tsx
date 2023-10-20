@@ -122,6 +122,7 @@ const AdditionalInfo = () => {
               maxLength={250}
             ></textarea>
           </div>
+          <p><span className="text-orange font-medium text-lg">*</span> - field required</p>
           <button className="flex justify-center gap-2 rounded bg-orange px-7 py-4 font-medium text-white transition-all hover:opacity-80">
             <svg
               xmlns="http://www.w3.org/2000/svg"
