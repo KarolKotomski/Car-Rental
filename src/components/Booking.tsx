@@ -2,7 +2,7 @@ import carIcon from "../icons/car_icon.png";
 import location from "../icons/location.png";
 import calendar from "../icons/calendar.png";
 import BookingUnit from "./BookingUnit";
-import { vehicles } from "../data/AllData";
+import { vehicles, locationOptions } from "../data/AllData";
 
 export interface Vehicle {
   id: number;
@@ -18,6 +18,7 @@ export interface Vehicle {
   ac: string;
   year: string;
 }
+
 
 const Booking = () => {
   return (
@@ -36,22 +37,22 @@ const Booking = () => {
             <BookingUnit
               icon={location}
               label="Pick-up location"
-              options=""
+              options={locationOptions}
             />
             <BookingUnit
               icon={location}
               label="Drop-off location"
-              options=""
+              options={locationOptions}
             />
             <BookingUnit
               icon={calendar}
               label="Pick-up date"
-              options=""
+              
             />
             <BookingUnit
               icon={calendar}
               label="Drop-off date"
-              options=""
+              
             />
             <div className="m-3 flex items-end justify-center">
               <button className="h-10 w-full rounded bg-orange font-medium text-white transition-all duration-300 ease-in-out hover:opacity-80 shadow-lg shadow-orangeShadow">

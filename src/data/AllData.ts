@@ -162,3 +162,5 @@ export const faq = [
       "Book in advance: Booking your rental car ahead of time can often result in lower prices. Compare prices from multiple companies: Use websites like Kayak, Expedia, or Travelocity to compare prices from multiple rental car companies. Look for discount codes and coupons: Search for discount codes and coupons that you can use to lower the rental price. Renting from an off-airport location can sometimes result in lower prices.",
   },
 ];
+
+export const locationOptions = ["Cracow", "Gdansk", "Poznan", "Warsaw", "Wroclaw"];

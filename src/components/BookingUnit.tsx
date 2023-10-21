@@ -3,7 +3,7 @@ import { Vehicle } from "./Booking";
 interface Props {
   icon: string;
   label: string;
-  options?: string | Vehicle[];
+  options?: string[] | Vehicle[];
 }
 
 const BookingUnit = ({ icon, label, options }: Props) => {
@@ -27,15 +27,25 @@ const BookingUnit = ({ icon, label, options }: Props) => {
             name="car_model"
             id="car_model"
           >
-            {Array.isArray(options) ? (
-              options.map((option, index) => (
-                <option key={index} value={option.brand + " " + option.model}>
-                  {option.brand} {option.model}
-                </option>
-              ))
-            ) : (
-              <option value={options}>{options}</option>
-            )}
+            {Array.isArray(options) &&
+              options.map((option, index) => {
+                if (typeof option === "string") {
+                  return (
+                    <option key={index} value={option}>
+                      {option}
+                    </option>
+                  );
+                } else {
+                  return (
+                    <option
+                      key={index}
+                      value={`${option.brand} ${option.model}`}
+                    >
+                      {option.brand} {option.model}
+                    </option>
+                  );
+                }
+              })}
           </select>
         </div>
       </form>
