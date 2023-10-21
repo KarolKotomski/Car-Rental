@@ -63,13 +63,15 @@ const Faq = () => {
               </div>
 
               <div
-                className={`tran cursor-pointer bg-white px-8 text-gray2 shadow-xl transition-all ease-linear duration-300 ${
+                className={`grid cursor-pointer bg-white text-gray2 shadow-xl transition-[grid-template-rows] duration-300 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] ${
                   activeButtonId === item.id
-                    ? "overflow-auto py-5"
-                    : "max-h-0 overflow-hidden"
+                    ? "grid-rows-[1fr]"
+                    : "grid-rows-[0fr]"
                 }`}
               >
-                {item.answer}
+                <div className="overflow-hidden">
+                  <p className="px-8 py-5">{item.answer}</p>
+                </div>
               </div>
             </div>
           ))}
