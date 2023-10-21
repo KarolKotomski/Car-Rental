@@ -63,7 +63,7 @@ const Faq = () => {
               </div>
 
               <div
-                className={`tran cursor-pointer bg-white px-8 text-gray2 shadow-xl transition-all ease-linear duration-[500ms] ${
+                className={`tran cursor-pointer bg-white px-8 text-gray2 shadow-xl transition-all ease-linear duration-300 ${
                   activeButtonId === item.id
                     ? "overflow-auto py-5"
                     : "max-h-0 overflow-hidden"

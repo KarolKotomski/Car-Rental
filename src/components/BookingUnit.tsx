@@ -22,31 +22,36 @@ const BookingUnit = ({ icon, label, options }: Props) => {
           </div>
         </div>
         <div>
-          <select
-            className="w-full rounded-md border border-[#ccd7e6] p-2"
-            name="car_model"
-            id="car_model"
-          >
-            {Array.isArray(options) &&
-              options.map((option, index) => {
-                if (typeof option === "string") {
-                  return (
-                    <option key={index} value={option}>
-                      {option}
-                    </option>
-                  );
-                } else {
-                  return (
-                    <option
-                      key={index}
-                      value={`${option.brand} ${option.model}`}
-                    >
-                      {option.brand} {option.model}
-                    </option>
-                  );
-                }
-              })}
-          </select>
+          {options ? (
+            <select className="w-full rounded-md border border-[#ccd7e6] p-2">
+              <option className="text-orange">---</option>;
+              {Array.isArray(options) &&
+                options.map((option, index) => {
+                  if (typeof option === "string") {
+                    return (
+                      <option key={index} value={option} className="text-gray2">
+                        {option}
+                      </option>
+                    );
+                  } else {
+                    return (
+                      <option
+                        key={index}
+                        value={`${option.brand} ${option.model}`}
+                        className="text-gray2"
+                      >
+                        {option.brand} {option.model}
+                      </option>
+                    );
+                  }
+                })}
+            </select>
+          ) : (
+            <input
+              type="date"
+              className="w-full rounded-md border border-[#ccd7e6] px-2 py-[5.5px]"
+            ></input>
+          )}
         </div>
       </form>
     </div>
