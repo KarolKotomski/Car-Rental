@@ -7,7 +7,7 @@ interface Props {
 
 const TestimonialsPost = ({ opinion, picture, name, city }: Props) => {
   return (
-    <div className="flex min-h-[20rem] w-full flex-col bg-white p-4 sm:p-10 shadow-lg">
+    <div className="flex min-h-[22rem] w-full flex-col bg-white p-4 sm:p-10 shadow-lg">
       <div className="flex pb-5">
         <div className="flex items-end">
           <div className="mr-5 w-24">

@@ -16,7 +16,7 @@ const TestimonialsList = () => {
             experiences with you.
           </p>
         </div>
-        <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:p-10">
+        <div className="flex flex-col items-center justify-center gap-10 py-10 lg:flex-row">
           <TestimonialsPost
             opinion='"We rented a car from this website and had an amazing experience!
 							The booking was easy and the rental rates were very affordable."'

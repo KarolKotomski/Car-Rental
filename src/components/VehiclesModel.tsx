@@ -20,11 +20,11 @@ const VehiclesModel = ({
   line,
 }: Props) => {
   return (
-    <div className="flex flex-col justify-between border border-[#d5d5d5] shadow-lg">
+    <div className="flex flex-col justify-between border border-[#d5d5d5] shadow-lg p-7">
       <div className="h-1/2">
         <img className="h-full w-full object-cover" src={image} alt="car" />
       </div>
-      <div className="flex flex-col gap-6 px-7 py-5">
+      <div className="flex flex-col gap-6 pt-5">
         <div className="flex justify-between">
           <div className="flex flex-col justify-between">
             <p className="text-2xl font-medium">

@@ -25,18 +25,18 @@ const Faq = () => {
             our website: Answers to common concerns and inquiries.
           </p>
         </div>
-        <div className="mx-auto w-full lg:max-w-[50rem]">
+        <div className="mx-auto w-full lg:max-w-[50rem] py-10">
           {faq.map((item, id) => (
             <div
-              className="flex flex-col"
+              className="flex flex-col shadow-xl"
               key={id}
               onClick={() => toggle(item.id)}
             >
               <div
-                className={`flex cursor-pointer items-center justify-between gap-5 px-8 py-5 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1.0)] ${
+                className={`flex cursor-pointer items-center justify-between gap-5 px-8 py-5 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1.0)] shadow-lg ${
                   activeButtonId === item.id
-                    ? "z-[1] bg-orange text-white shadow-lg shadow-orangeShadow"
-                    : "bg-white shadow-xl"
+                    ? "z-[1] bg-orange text-white shadow-orangeShadow"
+                    : "bg-white"
                 }`}
               >
                 <div className="text-lg font-medium">
@@ -44,8 +44,8 @@ const Faq = () => {
                 </div>
                 <div className="w-6">
                   <svg
-                    className={`h-6 w-6 ${
-                      activeButtonId === item.id ? "text-white" : "text-black"
+                    className={`h-6 w-6 transition-all duration-300 ${
+                      activeButtonId === item.id ? "text-white rotate-180" : "text-black"
                     }`}
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
