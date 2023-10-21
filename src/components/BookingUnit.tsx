@@ -1,7 +1,9 @@
+import { Vehicle } from "./Booking";
+
 interface Props {
   icon: string;
   label: string;
-  options: string;
+  options?: string | Vehicle[];
 }
 
 const BookingUnit = ({ icon, label, options }: Props) => {
@@ -25,7 +27,15 @@ const BookingUnit = ({ icon, label, options }: Props) => {
             name="car_model"
             id="car_model"
           >
-            {options}
+            {Array.isArray(options) ? (
+              options.map((option, index) => (
+                <option key={index} value={option.brand + " " + option.model}>
+                  {option.brand} {option.model}
+                </option>
+              ))
+            ) : (
+              <option value={options}>{options}</option>
+            )}
           </select>
         </div>
       </form>
