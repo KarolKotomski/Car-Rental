@@ -22,11 +22,13 @@ const Hero = () => {
             </p>
           </div>
           <div className="flex flex-wrap justify-center gap-3 font-medium xs:flex-nowrap">
-            <button className="flex min-w-[163px] items-center gap-1 rounded bg-orange px-7 py-4 text-white transition-all duration-300 hover:opacity-80 shadow-lg shadow-orangeShadow">
-              Book Ride
-              <img className="w-6" src={checkmark} alt="check mark sign" />
-            </button>
-            <button className="flex min-w-[163px] items-center gap-1 rounded bg-black px-7 py-4 text-white transition-all shadow-lg shadow-gray2 duration-300 hover:opacity-80">
+            <a href="#booking-section">
+              <button className="flex min-w-[163px] items-center gap-1 rounded bg-orange px-7 py-4 text-white shadow-lg shadow-orangeShadow transition-all duration-300 hover:opacity-80">
+                Book Ride
+                <img className="w-6" src={checkmark} alt="check mark sign" />
+              </button>
+            </a>
+            <button className="flex min-w-[163px] items-center gap-1 rounded bg-black px-7 py-4 text-white shadow-lg shadow-gray2 transition-all duration-300 hover:opacity-80">
               Learn More
               <img className="w-4" src={arrowRight} alt="arrow right" />
             </button>
