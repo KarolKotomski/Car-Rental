@@ -13,9 +13,8 @@ const Navbar = () => {
   return (
     <nav>
       <div
-        className={`fixed z-[99] flex h-screen flex-col items-center justify-center overflow-hidden bg-white transition-all duration-500 ${
-          isMenuActive ? "w-full" : "w-0"
-        }`}
+        className={`fixed z-[99] flex h-screen flex-col items-center justify-center overflow-hidden bg-white transition-all duration-500 ${isMenuActive ? "w-full " : "w-0"
+          }`}
       >
         <div
           className="absolute right-10 top-10 cursor-pointer transition-colors hover:text-orange"
