@@ -84,9 +84,11 @@ const Pick = () => {
                 <div className="w-1/2 border-r-2 border-gray2">Fuel:</div>
                 <div className="w-1/2">{selectedVehicle.fuel}</div>
               </div>
-              <button className="mt-5 rounded bg-orange px-4 py-2 text-xl text-white shadow-lg shadow-orangeShadow transition-all duration-300 hover:opacity-80">
-                Book now
-              </button>
+              <a href="#booking-section">
+                <button className="mt-5 w-full rounded bg-orange px-4 py-2 text-xl text-white shadow-lg shadow-orangeShadow transition-all duration-300 hover:opacity-80">
+                  Book now
+                </button>
+              </a>
             </div>
           </div>
         </div>

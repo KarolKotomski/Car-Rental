@@ -5,8 +5,11 @@ import { useState } from "react";
 const Navbar = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
 
-  const handleClick = () => setIsMenuActive(!isMenuActive);
-  
+  const handleClick = () => {
+    setIsMenuActive(!isMenuActive);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <nav>
       <div
