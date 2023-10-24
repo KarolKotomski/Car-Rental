@@ -1,21 +1,21 @@
 interface Props {
+  author: string;
   opinion: string;
   picture: string;
-  name: string;
-  city: string;
+  place: string;
 }
 
-const TestimonialsPost = ({ opinion, picture, name, city }: Props) => {
+const TestimonialsPost = ({ author, opinion, picture, place }: Props) => {
   return (
-    <div className="flex min-h-[22rem] w-full flex-col bg-white p-4 sm:p-10 shadow-lg">
+    <div className="flex min-h-[22rem] w-full flex-col bg-white p-4 shadow-lg sm:p-10">
       <div className="flex pb-5">
         <div className="flex items-end">
           <div className="mr-5 w-24">
             <img src={picture} alt="Customer" />
           </div>
           <div>
-            <p className="text-lg font-semibold">{name}</p>
-            <p>{city}</p>
+            <p className="text-lg font-semibold">{author}</p>
+            <p>{place}</p>
           </div>
         </div>
         <div className="ml-auto pb-2">

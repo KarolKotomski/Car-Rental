@@ -18,6 +18,9 @@ import rivera from "../images/team/4.png";
 import rizz from "../images/team/5.png";
 import hunt from "../images/team/6.png";
 
+import johnDoe from "../images/team/5.png";
+import janeDoe from "../images/team/6.png";
+
 export const vehicles = [
   {
     id: 1,
@@ -163,4 +166,29 @@ export const faq = [
   },
 ];
 
-export const locationOptions = ["Cracow", "Gdansk", "Poznan", "Warsaw", "Wroclaw"];
+export const locationOptions = [
+  "Cracow",
+  "Gdansk",
+  "Poznan",
+  "Warsaw",
+  "Wroclaw",
+];
+
+export const testimonials = [
+  {
+    id: 1,
+    author: "John Doe",
+    opinion:
+      "We rented a car from this website and had an amazing experience! The booking was easy and the rental rates were very affordable.",
+    place: "Warsaw, Poland",
+    picture: johnDoe,
+  },
+  {
+    id: 2,
+    author: "Jane Doe",
+    opinion:
+      "The car was in great condition and made our trip even better. Highly recommend for this car rental website!",
+    place: "Cracow, Poland",
+    picture: janeDoe,
+  },
+];

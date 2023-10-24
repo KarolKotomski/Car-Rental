@@ -1,6 +1,5 @@
-import johnDoe from "../images/team/5.png";
-import janeDoe from "../images/team/6.png";
 import TestimonialsPost from "./TestimonialsPost";
+import { testimonials } from "../data/AllData";
 
 const TestimonialsList = () => {
   return (
@@ -17,19 +16,15 @@ const TestimonialsList = () => {
           </p>
         </div>
         <div className="flex flex-col items-center justify-center gap-10 py-10 lg:flex-row">
-          <TestimonialsPost
-            opinion='"We rented a car from this website and had an amazing experience!
-							The booking was easy and the rental rates were very affordable."'
-            picture={johnDoe}
-            name="John Doe"
-            city="Warsaw, Poland"
-          />
-          <TestimonialsPost
-            opinion='"The car was in great condition and made our trip even better. Highly recommend for this car rental website!"'
-            picture={janeDoe}
-            name="Jane Doe"
-            city="Cracow, Poland"
-          />
+          {testimonials.map((testimonial) => (
+            <TestimonialsPost
+              author={testimonial.author}
+              opinion={testimonial.opinion}
+              picture={testimonial.picture}
+              place={testimonial.place}
+              key={testimonial.id}
+            />
+          ))}
         </div>
       </div>
     </div>

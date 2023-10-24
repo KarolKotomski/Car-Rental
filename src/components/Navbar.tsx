@@ -18,7 +18,7 @@ const Navbar = () => {
       >
         <div
           className="absolute right-10 top-10 cursor-pointer transition-colors hover:text-orange"
-          onClick={() => handleClick()}
+          onClick={handleClick}
         >
           <svg
             className="w-8"
@@ -38,7 +38,7 @@ const Navbar = () => {
           <Link to={"/"}>
             <li
               className="w-fit transition-colors hover:text-orange"
-              onClick={() => handleClick()}
+              onClick={handleClick}
             >
               Home
             </li>
@@ -46,7 +46,7 @@ const Navbar = () => {
           <Link to={"about"}>
             <li
               className="w-fit transition-colors hover:text-orange"
-              onClick={() => handleClick()}
+              onClick={handleClick}
             >
               About
             </li>
@@ -54,7 +54,7 @@ const Navbar = () => {
           <Link to={"vehicles"}>
             <li
               className="w-fit transition-colors hover:text-orange"
-              onClick={() => handleClick()}
+              onClick={handleClick}
             >
               Vehicles
             </li>
@@ -62,7 +62,7 @@ const Navbar = () => {
           <Link to={"testimonials"}>
             <li
               className="w-fit transition-colors hover:text-orange"
-              onClick={() => handleClick()}
+              onClick={handleClick}
             >
               Testimonials
             </li>
@@ -70,7 +70,7 @@ const Navbar = () => {
           <Link to={"team"}>
             <li
               className="w-fit transition-colors hover:text-orange"
-              onClick={() => handleClick()}
+              onClick={handleClick}
             >
               Our Team
             </li>
@@ -78,7 +78,7 @@ const Navbar = () => {
           <Link to={"contact"}>
             <li
               className="w-fit transition-colors hover:text-orange"
-              onClick={() => handleClick()}
+              onClick={handleClick}
             >
               Contact
             </li>
@@ -122,7 +122,7 @@ const Navbar = () => {
           </button>
           <div
             className="my-auto mr-5 w-10 cursor-pointer text-black transition-all duration-300 ease-in-out hover:text-orange lg:hidden"
-            onClick={() => handleClick()}
+            onClick={handleClick}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

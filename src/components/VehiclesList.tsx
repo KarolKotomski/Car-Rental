@@ -5,17 +5,18 @@ const VehiclesList = () => {
   return (
     <div className="container py-20">
       <div className="grid grid-cols-1 gap-10 p-5 md:grid-cols-2 xl:grid-cols-3">
-        {vehicles.map((car, index) => (
+        {vehicles.map((vehicle) => (
           <VehiclesModel
-            image={car.image1}
-            brand={car.brand}
-            model={car.model}
-            price={car.cost}
-            door={car.doors}
-            transmission={car.transmission}
-            fuel={car.fuel}
-            line={car.line}
-            key={index} />
+            image={vehicle.image1}
+            brand={vehicle.brand}
+            model={vehicle.model}
+            price={vehicle.cost}
+            door={vehicle.doors}
+            transmission={vehicle.transmission}
+            fuel={vehicle.fuel}
+            line={vehicle.line}
+            key={vehicle.id}
+          />
         ))}
       </div>
     </div>

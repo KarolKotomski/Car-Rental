@@ -26,10 +26,10 @@ const Faq = () => {
           </p>
         </div>
         <div className="mx-auto w-full py-10 lg:max-w-[50rem]">
-          {faq.map((item, id) => (
+          {faq.map((item) => (
             <div
               className="flex flex-col shadow-xl"
-              key={id}
+              key={item.id}
               onClick={() => toggle(item.id)}
             >
               <div
