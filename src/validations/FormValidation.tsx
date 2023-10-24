@@ -9,16 +9,20 @@ export const schema = yup.object().shape({
   pickDate: yup
     .string()
     .required("field is required")
-    .test("is-future", "Date must be in the future", function (value) {
-      const dateValue = new Date(value);
-      return dateValue > today;
-    }),
+    .test(
+      "is-future",
+      "The pick-up date must be in the future",
+      function (value) {
+        const dateValue = new Date(value);
+        return dateValue > today;
+      },
+    ),
   dropDate: yup
     .string()
     .required("field is required")
     .test(
       "is-after-pickDate",
-      "Drop-off date must be after pick-up date",
+      "The drop-off date must be the same as or later than the pick-up date",
       function (value, context) {
         const { pickDate } = context.parent;
         if (!pickDate) {

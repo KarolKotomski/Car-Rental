@@ -172,7 +172,7 @@ const Form = () => {
           </div>
         </div>
         {/* Submit button */}
-        <div className="mt-[52px]">
+        <div className="sm:mt-[52px]">
           <button
             type="submit"
             className="h-10 w-full rounded bg-orange font-medium text-white shadow-lg shadow-orangeShadow transition-all duration-300 ease-in-out hover:opacity-80"
