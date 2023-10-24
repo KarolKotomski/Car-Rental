@@ -3,40 +3,9 @@ import location from "../icons/location.png";
 import calendar from "../icons/calendar.png";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
 import { DevTool } from "@hookform/devtools";
 import { locationOptions, vehicles } from "../data/AllData";
-
-const today = new Date();
-
-const schema = yup.object({
-  carType: yup.string().required("field is required"),
-  pickLocation: yup.string().required("field is required"),
-  dropLocation: yup.string().required("field is required"),
-  pickDate: yup
-    .date()
-    .min(
-      today,
-      `Pick-up date cannot be ${today?.toLocaleDateString()} or earlier`,
-    )
-    .required("field is required"),
-  dropDate: yup
-    .date()
-    .min(
-      today,
-      `Drop-off date cannot be ${today?.toLocaleDateString()} or earlier`,
-    )
-    .when("pickDate", (pickDate, schema) => {
-      return (
-        pickDate &&
-        schema.min(
-          pickDate,
-          "Drop-off date cannot be earlier than pick-up date",
-        )
-      );
-    })
-    .required("field is required"),
-});
+import { schema } from "../validations/FormValidation";
 
 interface FormValues {
   carType: string;
@@ -49,13 +18,6 @@ interface FormValues {
 const Form = () => {
   const form = useForm<FormValues>({
     resolver: yupResolver(schema),
-    defaultValues: {
-      carType: "",
-      pickLocation: "",
-      dropLocation: "",
-      pickDate: today,
-      dropDate: today,
-    },
   });
   const { register, control, handleSubmit, formState } = form;
   const { errors } = formState;
