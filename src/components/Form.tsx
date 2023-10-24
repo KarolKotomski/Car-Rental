@@ -5,26 +5,26 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { DevTool } from "@hookform/devtools";
+import { locationOptions, vehicles } from "../data/AllData";
 
-const MIN_DATE = new Date();
+const today = new Date();
 
 const schema = yup.object({
-  carType: yup.string().required("Car is required"),
-  pickLocation: yup.string().required("Pick-up location is required"),
-  dropLocation: yup.string().required("Drop-off location is required"),
+  carType: yup.string().required("field is required"),
+  pickLocation: yup.string().required("field is required"),
+  dropLocation: yup.string().required("field is required"),
   pickDate: yup
     .date()
     .min(
-      MIN_DATE,
-      `Pick-up date cannot be ${MIN_DATE?.toLocaleDateString()} or earlier`,
+      today,
+      `Pick-up date cannot be ${today?.toLocaleDateString()} or earlier`,
     )
-    .typeError("Pick-up date is required")
-    .required("Pick-up date is required"),
+    .required("field is required"),
   dropDate: yup
     .date()
     .min(
-      MIN_DATE,
-      `Drop-off date cannot be ${MIN_DATE?.toLocaleDateString()} or earlier`,
+      today,
+      `Drop-off date cannot be ${today?.toLocaleDateString()} or earlier`,
     )
     .when("pickDate", (pickDate, schema) => {
       return (
@@ -35,21 +35,27 @@ const schema = yup.object({
         )
       );
     })
-    .typeError("Drop-off date is required")
-    .required("Drop-off date is required"),
+    .required("field is required"),
 });
 
-type FormValues = {
+interface FormValues {
   carType: string;
   pickLocation: string;
   dropLocation: string;
   pickDate: Date;
   dropDate: Date;
-};
+}
 
 const Form = () => {
   const form = useForm<FormValues>({
     resolver: yupResolver(schema),
+    defaultValues: {
+      carType: "",
+      pickLocation: "",
+      dropLocation: "",
+      pickDate: today,
+      dropDate: today,
+    },
   });
   const { register, control, handleSubmit, formState } = form;
   const { errors } = formState;
@@ -83,12 +89,14 @@ const Form = () => {
                 {...register("carType")}
               >
                 <option value="">---</option>
-                <option value="">Audi A1</option>
-                <option value="">BMW 320</option>
-                <option value="">Mercedes-Benz GLK</option>
-                <option value="">Toyota Camry</option>
-                <option value="">Volkswagen Golf</option>
-                <option value="">Volkswagen Passat CC</option>
+                {vehicles.map((vehicle) => (
+                  <option
+                    key={vehicle.id}
+                    value={`${vehicle.brand} ${vehicle.model}`}
+                  >
+                    {vehicle.brand} {vehicle.model}
+                  </option>
+                ))}
               </select>
             </div>
             <p className="mt-2 text-red-500">{errors.carType?.message}</p>
@@ -114,6 +122,11 @@ const Form = () => {
                 {...register("pickLocation")}
               >
                 <option value="">---</option>
+                {locationOptions.map((location, index) => (
+                  <option value={location} key={index}>
+                    {location}
+                  </option>
+                ))}
               </select>
             </div>
             <p className="mt-2 text-red-500">{errors.pickLocation?.message}</p>
@@ -139,6 +152,11 @@ const Form = () => {
                 {...register("dropLocation")}
               >
                 <option value="">---</option>
+                {locationOptions.map((location, index) => (
+                  <option value={location} key={index}>
+                    {location}
+                  </option>
+                ))}
               </select>
             </div>
             <p className="mt-2 text-red-500">{errors.dropLocation?.message}</p>
