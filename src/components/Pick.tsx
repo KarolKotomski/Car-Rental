@@ -26,14 +26,14 @@ const Pick = () => {
 
         <div className="pt-10 lg:flex">
           <div className="flex flex-col justify-between gap-3">
-            {vehicles.map((vehicle, index) => (
+            {vehicles.map((vehicle) => (
               <button
                 className={`whitespace-nowrap px-6 py-4 text-left text-xl font-medium transition-colors duration-300 hover:bg-orange hover:text-white ${
                   activeButtonId === vehicle.id
                     ? "bg-orange text-white"
                     : "bg-gray3"
                 }`}
-                key={index}
+                key={vehicle.id}
                 onClick={() => handleButtonClick(vehicle.id)}
               >
                 {vehicle.brand} {vehicle.model}
