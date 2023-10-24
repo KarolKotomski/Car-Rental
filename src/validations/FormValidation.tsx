@@ -7,28 +7,26 @@ export const schema = yup.object().shape({
   pickLocation: yup.string().required("field is required"),
   dropLocation: yup.string().required("field is required"),
   pickDate: yup
-    .date()
-    .typeError("invalid date format")
-    .min(
-      today,
-      `Pick-up date cannot be ${today?.toLocaleDateString()} or earlier`,
-    )
-    .required("field is required"),
+    .string()
+    .required("field is required")
+    .test("is-future", "Date must be in the future", function (value) {
+      const dateValue = new Date(value);
+      return dateValue > today;
+    }),
   dropDate: yup
-    .date()
-    .typeError("invalid date format")
-    .min(
-      today,
-      `Drop-off date cannot be ${today?.toLocaleDateString()} or earlier`,
-    )
-    .when("pickDate", (pickDate, schema) => {
-      return (
-        pickDate &&
-        schema.min(
-          pickDate,
-          "Drop-off date cannot be earlier than pick-up date",
-        )
-      );
-    })
-    .required("field is required"),
+    .string()
+    .required("field is required")
+    .test(
+      "is-after-pickDate",
+      "Drop-off date must be after pick-up date",
+      function (value, context) {
+        const { pickDate } = context.parent;
+        if (!pickDate) {
+          return true;
+        }
+        const dropDateObj = new Date(value);
+        const pickDateObj = new Date(pickDate);
+        return dropDateObj >= pickDateObj;
+      },
+    ),
 });

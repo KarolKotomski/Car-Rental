@@ -11,8 +11,8 @@ interface FormValues {
   carType: string;
   pickLocation: string;
   dropLocation: string;
-  pickDate: Date;
-  dropDate: Date;
+  pickDate: string;
+  dropDate: string;
 }
 
 const Form = () => {
