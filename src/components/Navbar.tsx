@@ -1,20 +1,28 @@
 import { Link } from "react-router-dom";
 import logo from "../images/logo/logo.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   const handleClick = () => {
     setIsMenuActive(!isMenuActive);
-    window.scrollTo(0, 0);
   };
+
+  useEffect(() => {
+    if (isMenuActive === true) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isMenuActive]);
 
   return (
     <nav>
       <div
-        className={`fixed z-[99] flex h-screen flex-col items-center justify-center overflow-hidden bg-white transition-all duration-500 ${isMenuActive ? "w-full " : "w-0"
-          }`}
+        className={`fixed z-[99] flex h-screen flex-col items-center justify-center overflow-hidden bg-white transition-all duration-500 ${
+          isMenuActive ? "w-full " : "w-0"
+        }`}
       >
         <div
           className="absolute right-10 top-10 cursor-pointer transition-colors hover:text-orange"
