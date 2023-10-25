@@ -166,7 +166,7 @@ export const faq = [
   },
 ];
 
-export const locationOptions = [
+export const locations = [
   "Cracow",
   "Gdansk",
   "Poznan",

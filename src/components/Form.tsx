@@ -1,11 +1,12 @@
 import carIcon from "../icons/car_icon.png";
-import location from "../icons/location.png";
-import calendar from "../icons/calendar.png";
+import locationIcon from "../icons/location.png";
+import calendarIcon from "../icons/calendar.png";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { DevTool } from "@hookform/devtools";
-import { locationOptions, vehicles } from "../data/AllData";
+import { locations, vehicles } from "../data/AllData";
 import { schema } from "../validations/FormValidation";
+import FormField from "./FormField";
 
 interface FormValues {
   carType: string;
@@ -26,6 +27,37 @@ const Form = () => {
     console.log("Form submitted", data);
   };
 
+  /* Car type */
+  const vehiclesOptions = () =>
+    vehicles.map((vehicle) => (
+      <option key={vehicle.id} value={`${vehicle.brand} ${vehicle.model}`}>
+        {vehicle.brand} {vehicle.model}
+      </option>
+    ));
+  const carTypeErrorMessage = errors.carType?.message;
+
+
+  /* Pick-up location */
+  const locationOptions = () =>
+    locations.map((location, index) => (
+      <option value={location} key={index}>
+        {location}
+      </option>
+    ));
+  const pickLocationErrorMessage = errors.pickLocation?.message;
+
+
+  /* Drop-off location */
+  const dropLocationErrorMessage = errors.dropLocation?.message;
+
+
+  /* Pick-up date */
+  const pickDateErrorMessage = errors.pickDate?.message;
+
+
+  /* Drop-off date */
+  const dropDateErrorMessage = errors.dropDate?.message;
+
   return (
     <>
       <form
@@ -33,144 +65,49 @@ const Form = () => {
         className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3"
       >
         {/* Car type */}
-        <div className="rounded-md">
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2">
-              <div>
-                <img alt="icon" src={carIcon} className="w-6"></img>
-              </div>
-              <div>
-                <label className="flex whitespace-nowrap py-3 text-lg font-medium">
-                  Select your car<span className="text-orange">*</span>
-                </label>
-              </div>
-            </div>
-            <div>
-              <select
-                className="w-full rounded-md border border-[#ccd7e6] p-2"
-                {...register("carType")}
-              >
-                <option value="">---</option>
-                {vehicles.map((vehicle) => (
-                  <option
-                    key={vehicle.id}
-                    value={`${vehicle.brand} ${vehicle.model}`}
-                  >
-                    {vehicle.brand} {vehicle.model}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <p className="mt-2 text-red-500">{errors.carType?.message}</p>
-          </div>
-        </div>
+        <FormField
+          icon={carIcon}
+          label="Your car"
+          register={register("carType")}
+          options={vehiclesOptions()}
+          errors={carTypeErrorMessage}
+        />
 
         {/* Pick-up location */}
-        <div className="rounded-md">
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2">
-              <div>
-                <img alt="icon" src={location} className="w-6"></img>
-              </div>
-              <div>
-                <label className="flex whitespace-nowrap py-3 text-lg font-medium">
-                  Pick-up location<span className="text-orange">*</span>
-                </label>
-              </div>
-            </div>
-            <div>
-              <select
-                className="w-full rounded-md border border-[#ccd7e6] p-2"
-                {...register("pickLocation")}
-              >
-                <option value="">---</option>
-                {locationOptions.map((location, index) => (
-                  <option value={location} key={index}>
-                    {location}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <p className="mt-2 text-red-500">{errors.pickLocation?.message}</p>
-          </div>
-        </div>
+        <FormField
+          icon={locationIcon}
+          label="Pick-up location"
+          register={register("pickLocation")}
+          options={locationOptions()}
+          errors={pickLocationErrorMessage}
+        />
 
         {/* Drop-off location */}
-        <div className="rounded-md">
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2">
-              <div>
-                <img alt="icon" src={location} className="w-6"></img>
-              </div>
-              <div>
-                <label className="flex whitespace-nowrap py-3 text-lg font-medium">
-                  Drop-off location<span className="text-orange">*</span>
-                </label>
-              </div>
-            </div>
-            <div>
-              <select
-                className="w-full rounded-md border border-[#ccd7e6] p-2"
-                {...register("dropLocation")}
-              >
-                <option value="">---</option>
-                {locationOptions.map((location, index) => (
-                  <option value={location} key={index}>
-                    {location}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <p className="mt-2 text-red-500">{errors.dropLocation?.message}</p>
-          </div>
-        </div>
+        <FormField
+          icon={locationIcon}
+          label="Drop-off location"
+          register={register("dropLocation")}
+          options={locationOptions()}
+          errors={dropLocationErrorMessage}
+        />
         {/* Pick-up date */}
-        <div className="rounded-md">
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2">
-              <div>
-                <img alt="icon" src={calendar} className="w-6"></img>
-              </div>
-              <div>
-                <label className="flex whitespace-nowrap py-3 text-lg font-medium">
-                  Pick-up date<span className="text-orange">*</span>
-                </label>
-              </div>
-            </div>
-            <div>
-              <input
-                type="date"
-                className="w-full rounded-md border border-[#ccd7e6] px-2 py-[5.5px]"
-                {...register("pickDate")}
-              ></input>
-            </div>
-            <p className="mt-2 text-red-500">{errors.pickDate?.message}</p>
-          </div>
-        </div>
+        <FormField
+          icon={calendarIcon}
+          label="Pick-up date"
+          register={register("pickDate")}
+          errors={pickDateErrorMessage}
+          date={true}
+        />
 
         {/* Drop-off date */}
-        <div className="rounded-md">
-          <div className="flex flex-col">
-            <div className="flex items-center gap-2">
-              <div>
-                <img alt="icon" src={calendar} className="w-6"></img>
-              </div>
-              <div>
-                <label className="flex whitespace-nowrap py-3 text-lg font-medium">
-                  Drop-off date<span className="text-orange">*</span>
-                </label>
-              </div>
-            </div>
-            <div>
-              <input
-                type="date"
-                className="w-full rounded-md border border-[#ccd7e6] px-2 py-[5.5px]"
-                {...register("dropDate")}
-              ></input>
-            </div>
-            <p className="mt-2 text-red-500">{errors.dropDate?.message}</p>
-          </div>
-        </div>
+        <FormField
+          icon={calendarIcon}
+          label="Drop-off date"
+          register={register("dropDate")}
+          errors={dropDateErrorMessage}
+          date={true}
+        />
+
         {/* Submit button */}
         <div className="sm:mt-[52px]">
           <button
