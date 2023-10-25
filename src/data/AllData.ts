@@ -21,6 +21,8 @@ import hunt from "../images/team/6.png";
 import johnDoe from "../images/team/5.png";
 import janeDoe from "../images/team/6.png";
 
+
+// VEHICLES
 export const vehicles = [
   {
     id: 1,
@@ -106,6 +108,8 @@ export const vehicles = [
   },
 ];
 
+
+// PEOPLE
 export const people = [
   {
     id: 1,
@@ -145,6 +149,8 @@ export const people = [
   },
 ];
 
+
+// FAQ
 export const faq = [
   {
     id: 1,
@@ -166,6 +172,8 @@ export const faq = [
   },
 ];
 
+
+// LOCATIONS
 export const locations = [
   "Cracow",
   "Gdansk",
@@ -174,6 +182,8 @@ export const locations = [
   "Wroclaw",
 ];
 
+
+// TESTIMONIALS
 export const testimonials = [
   {
     id: 1,
