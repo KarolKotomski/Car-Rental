@@ -15,6 +15,7 @@ const Booking = () => {
           <Form />
         </div>
       </div>
+      <div className="fixed top-0 z-20 hidden h-full w-full bg-[rgba(0,0,0,0.3)]"></div>
     </div>
   );
 };

@@ -36,7 +36,6 @@ const Form = () => {
     ));
   const carTypeErrorMessage = errors.carType?.message;
 
-
   /* Pick-up location */
   const locationOptions = () =>
     locations.map((location, index) => (
@@ -46,14 +45,11 @@ const Form = () => {
     ));
   const pickLocationErrorMessage = errors.pickLocation?.message;
 
-
   /* Drop-off location */
   const dropLocationErrorMessage = errors.dropLocation?.message;
 
-
   /* Pick-up date */
   const pickDateErrorMessage = errors.pickDate?.message;
-
 
   /* Drop-off date */
   const dropDateErrorMessage = errors.dropDate?.message;

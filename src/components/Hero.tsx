@@ -10,7 +10,7 @@ const Hero = () => {
         <img src={heroBackground} alt="city skyscrapers" />
       </div>
       <div className="container flex pb-12 pt-40">
-        <div className="z-30 flex flex-col items-center py-4 md:max-w-md md:items-start">
+        <div className="z-10 flex flex-col items-center py-4 md:max-w-md md:items-start">
           <div className="flex flex-col items-center md:items-start">
             <h4 className="text-2xl font-bold">Plan your trip now</h4>
             <h1 className="pb-6 pt-2 text-center text-[3.25rem] font-extrabold leading-tight md:text-left">
@@ -34,7 +34,7 @@ const Hero = () => {
             </button>
           </div>
         </div>
-        <div className="z-20 hidden md:flex md:items-end">
+        <div className="z-10 hidden md:flex md:items-end">
           <img src={heroCar} alt="volkswagen car" />
         </div>
       </div>
