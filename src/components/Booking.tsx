@@ -1,6 +1,13 @@
+import { useState } from "react";
 import Form from "./Form";
 
 const Booking = () => {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
+  const handleFormSubmit = () => {
+    setIsFormSubmitted(true);
+  };
+
   return (
     <div className="bg-gray4 pt-20" id="booking-section">
       <div className="container">
@@ -12,10 +19,12 @@ const Booking = () => {
               required
             </p>
           </div>
-          <Form />
+          <Form onFormSubmit={handleFormSubmit} />
         </div>
       </div>
-      <div className="fixed top-0 z-20 hidden h-full w-full bg-[rgba(0,0,0,0.3)]"></div>
+      {isFormSubmitted && (
+        <div className="fixed top-0 z-20 h-full w-full bg-[rgba(0,0,0,0.3)]"></div>
+      )}
     </div>
   );
 };

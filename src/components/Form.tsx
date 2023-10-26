@@ -16,7 +16,14 @@ interface FormValues {
   dropDate: string;
 }
 
-const Form = () => {
+interface FormProps {
+  onFormSubmit: () => void;
+}
+
+const Form = ({onFormSubmit}: FormProps) => {
+  
+  /*Form management and resolving */
+
   const form = useForm<FormValues>({
     resolver: yupResolver(schema),
   });
@@ -25,6 +32,7 @@ const Form = () => {
 
   const onSubmit = (data: FormValues) => {
     console.log("Form submitted", data);
+    onFormSubmit();
   };
 
   /* Car type */
@@ -114,6 +122,8 @@ const Form = () => {
           </button>
         </div>
       </form>
+
+      {/* Additional devtool for form state management */}
       <DevTool control={control} />
     </>
   );
