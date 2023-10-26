@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Form from "./Form";
+import CompleteReservation from "./CompleteReservation";
 
 const Booking = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -22,9 +23,7 @@ const Booking = () => {
           <Form onFormSubmit={handleFormSubmit} />
         </div>
       </div>
-      {isFormSubmitted && (
-        <div className="fixed top-0 z-20 h-full w-full bg-[rgba(0,0,0,0.3)]"></div>
-      )}
+      {isFormSubmitted && <CompleteReservation />}
     </div>
   );
 };
