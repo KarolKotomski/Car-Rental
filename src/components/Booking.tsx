@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Form from "./Form";
-import CompleteReservation from "./CompleteReservation";
+import ReservationComplete from "./ReservationComplete";
 
 const Booking = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
@@ -23,7 +23,7 @@ const Booking = () => {
           <Form onFormSubmit={handleFormSubmit} />
         </div>
       </div>
-      {isFormSubmitted && <CompleteReservation />}
+      {isFormSubmitted && <ReservationComplete />}
     </div>
   );
 };
