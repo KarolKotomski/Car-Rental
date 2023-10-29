@@ -9,6 +9,14 @@ const Booking = () => {
     setIsFormSubmitted(true);
   };
 
+  useEffect(() => {
+    if (isFormSubmitted === true) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isFormSubmitted]);
+
   return (
     <div className="bg-gray4 pt-20" id="booking-section">
       <div className="container">

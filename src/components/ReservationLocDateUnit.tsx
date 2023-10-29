@@ -14,7 +14,7 @@ const ReservationLocDateUnit = ({
   location,
 }: Props) => {
   return (
-    <div className="flex flex-col items-center gap-3">
+    <div className="flex flex-col items-center gap-3 sm:flex-row">
       <div className="flex gap-3">
         <img src={image} alt="icon" className="w-6" />
         <h6 className="font-semibold">{label}</h6>

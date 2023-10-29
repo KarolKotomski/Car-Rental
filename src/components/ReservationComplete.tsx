@@ -2,13 +2,14 @@ import car from "../images/cars-big/audia1.jpg";
 import calendarIcon from "../icons/calendar.png";
 import locationIcon from "../icons/location.png";
 import ReservationLocDateUnit from "./ReservationLocDateUnit";
+import ReservationField from "./ReservationField";
 
 const ReservationComplete = () => {
   return (
     <div className="fixed top-0 z-50 flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.3)]">
-      <div className="h-full w-full max-w-screen-lg overflow-y-scroll bg-white">
+      <div className="h-full w-full max-w-screen-lg overflow-y-scroll bg-white md:relative lg:top-10 lg:p-1 ">
         <div className="flex justify-between bg-orange p-3">
-          <h3 className="text-2xl font-medium text-white">
+          <h3 className="text-xl font-medium text-white xs:text-2xl">
             Complete Reservation
           </h3>
           <svg
@@ -44,7 +45,7 @@ const ReservationComplete = () => {
               ></path>
             </svg>
             <h4 className="text-xl font-medium">
-              Upon completing this reservation enquiry you will receive:
+              Upon completing this reservation enquiry, you will receive:
             </h4>
           </div>
 
@@ -53,8 +54,8 @@ const ReservationComplete = () => {
             toll-free customer support number.
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-10 border-b bg-white p-8">
-          <div className="flex flex-col items-center gap-8">
+        <div className="grid grid-cols-1 gap-10 border-b p-8 xs:grid-cols-2 xs:gap-5 md:gap-0">
+          <div className="flex flex-col items-center gap-8 xs:items-start">
             <h5 className="text-lg font-medium text-orange">Location & Date</h5>
 
             <ReservationLocDateUnit
@@ -80,53 +81,90 @@ const ReservationComplete = () => {
               location="wwww"
             />
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col items-center gap-5 xs:items-start">
             <div className="text-lg font-medium">
               <h5>
-                Car- <span className="text-orange">BMW 320 ModernLine</span>
+                Your car:
+                <span className="text-orange"> BMW 320 ModernLine</span>
               </h5>
             </div>
             <div>
-              <img src={car} alt="selected car" />
+              <img src={car} alt="selected car" className="max-h-[210px]" />
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-10 bg-white p-8">
-          <h5 className="text-lg font-medium text-orange">
+        <div className="p-8">
+          <h5 className="mb-8 text-center text-lg font-medium text-orange">
             Personal Information
           </h5>
-          <div>
-            <h6>First name</h6>
-            <input type="text" />
-          </div>
-          <div>
-            <h6>First name</h6>
-            <input type="text" />
-          </div>
-          <div>
-            <h6>First name</h6>
-            <input type="text" />
-          </div>
-          <div>
-            <h6>First name</h6>
-            <input type="text" />
-          </div>
-          <div>
-            <h6>First name</h6>
-            <input type="text" />
-          </div>
-          <div>
-            <h6>First name</h6>
-            <input type="text" />
-          </div>
-          <div>
-            <h6>First name</h6>
-            <input type="text" />
-          </div>
-          <div>
-            <h6>First name</h6>
-            <input type="text" />
-          </div>
+          <form className="grid grid-cols-1 gap-8 xs:grid-cols-2">
+            <ReservationField
+              label="First name"
+              type="text"
+              placeholder="your first name"
+              minLength={3}
+              maxLength={30}
+            />
+            <ReservationField
+              label="Last name"
+              type="text"
+              placeholder="enter your last name"
+              minLength={3}
+              maxLength={30}
+            />
+            <ReservationField
+              label="Phone number"
+              type="number"
+              placeholder="enter your phone number"
+            />
+            <ReservationField
+              label="Your age"
+              type="number"
+              placeholder="enter your age"
+            />
+            <ReservationField
+              label="Email"
+              type="email"
+              placeholder="enter your email address"
+              minLength={3}
+              maxLength={30}
+            />
+            <ReservationField
+              label="Address"
+              type="text"
+              placeholder="enter your address"
+              minLength={3}
+              maxLength={30}
+            />
+            <ReservationField
+              label="City"
+              type="text"
+              placeholder="enter your city"
+              minLength={3}
+              maxLength={30}
+            />
+            <ReservationField
+              label="Zip Code"
+              type="text"
+              placeholder="enter your zip code"
+              minLength={3}
+              maxLength={30}
+            />
+            <div className="flex flex-col xs:col-span-2">
+              <div className="flex items-center gap-2">
+                <input type="checkbox" />
+                <p>Please send me latest news and updates</p>
+              </div>
+              <div className="flex items-center justify-center  p-5">
+                <button
+                  className="hover:opacity-8 rounded bg-orange px-7 py-4 font-medium text-white shadow-lg shadow-orangeShadow transition-all hover:bg-green-600"
+                  type="submit"
+                >
+                  Reserve now
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
