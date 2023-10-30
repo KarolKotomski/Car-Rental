@@ -1,12 +1,22 @@
 import { useState, useEffect } from "react";
 import Form from "./Form";
 import ReservationComplete from "./ReservationComplete";
+import { FormValues } from "./Form";
 
 const Booking = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
-  const handleFormSubmit = () => {
+  const [formData, setFormData] = useState<FormValues>({
+    carType: "",
+    pickLocation: "",
+    dropLocation: "",
+    pickDate: "",
+    dropDate: "", 
+  })
+
+  const handleFormSubmit = (data:FormValues) => {
     setIsFormSubmitted(true);
+    setFormData(data)
   };
 
   useEffect(() => {
@@ -31,7 +41,7 @@ const Booking = () => {
           <Form onFormSubmit={handleFormSubmit} />
         </div>
       </div>
-      {isFormSubmitted && <ReservationComplete />}
+      {isFormSubmitted && <ReservationComplete formData={formData} />}
     </div>
   );
 };

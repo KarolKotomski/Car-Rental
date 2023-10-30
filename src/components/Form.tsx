@@ -8,7 +8,7 @@ import { locations, vehicles } from "../data/AllData";
 import { schema } from "../validations/FormValidation";
 import FormField from "./FormField";
 
-interface FormValues {
+export interface FormValues {
   carType: string;
   pickLocation: string;
   dropLocation: string;
@@ -17,11 +17,10 @@ interface FormValues {
 }
 
 interface FormProps {
-  onFormSubmit: () => void;
+  onFormSubmit: (data: FormValues) => void;
 }
 
-const Form = ({onFormSubmit}: FormProps) => {
-  
+const Form = ({ onFormSubmit }: FormProps) => {
   /*Form management and resolving */
 
   const form = useForm<FormValues>({
@@ -32,7 +31,7 @@ const Form = ({onFormSubmit}: FormProps) => {
 
   const onSubmit = (data: FormValues) => {
     console.log("Form submitted", data);
-    onFormSubmit();
+    onFormSubmit(data);
   };
 
   /* Car type */

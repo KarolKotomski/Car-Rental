@@ -3,8 +3,13 @@ import calendarIcon from "../icons/calendar.png";
 import locationIcon from "../icons/location.png";
 import ReservationLocDateUnit from "./ReservationLocDateUnit";
 import ReservationField from "./ReservationField";
+import { FormValues } from "./Form";
 
-const ReservationComplete = () => {
+interface Props {
+  formData: FormValues;
+}
+
+const ReservationComplete = ({ formData }: Props) => {
   return (
     <div className="fixed top-0 z-50 flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.3)]">
       <div className="h-full w-full max-w-screen-lg overflow-y-scroll bg-white md:relative lg:top-10 lg:p-1 ">
@@ -45,47 +50,53 @@ const ReservationComplete = () => {
               ></path>
             </svg>
             <h4 className="text-xl font-medium">
-              Upon completing this reservation enquiry, you will receive:
+              Upon completing this reservation inquiry, you will receive:
             </h4>
           </div>
 
-          <p className="text-lg text-gray2">
-            Your rental voucher to produce on arrival at the rental desk and a
-            toll-free customer support number.
-          </p>
+          <ul className="list-inside list-disc text-lg text-gray2">
+            <li>
+              Your rental voucher to present upon arrival at the rental desk
+            </li>
+            <li>A toll-free customer support number</li>
+          </ul>
         </div>
-        <div className="grid grid-cols-1 gap-10 border-b p-8 xs:grid-cols-2 xs:gap-5 md:gap-0">
-          <div className="flex flex-col items-center gap-8 xs:items-start">
-            <h5 className="text-lg font-medium text-orange">Location & Date</h5>
-
-            <ReservationLocDateUnit
-              image={calendarIcon}
-              label="Pick-up:"
-              date="data"
-              type="time"
-            />
-            <ReservationLocDateUnit
-              image={calendarIcon}
-              label="Drop-off:"
-              date="data"
-              type="time"
-            />
-            <ReservationLocDateUnit
-              image={locationIcon}
-              label="Pick-up:"
-              location="aaaa"
-            />
-            <ReservationLocDateUnit
-              image={locationIcon}
-              label="Drop-off:"
-              location="wwww"
-            />
+        <div className="grid grid-cols-1 gap-10 border-b p-8">
+          <div className="flex flex-col gap-5">
+            <h5 className="text-center text-lg font-medium text-orange">
+              Location & Date
+            </h5>
+            <div className="grid grid-cols-1 items-center gap-8 xs:grid-cols-2 lg:grid-cols-4">
+              <ReservationLocDateUnit
+                image={calendarIcon}
+                label="Pick-up:"
+                date={formData.pickDate}
+                type="time"
+              />
+              <ReservationLocDateUnit
+                image={calendarIcon}
+                label="Drop-off:"
+                date={formData.dropDate}
+                type="time"
+              />
+              <ReservationLocDateUnit
+                image={locationIcon}
+                label="Pick-up:"
+                location={formData.pickLocation}
+              />
+              <ReservationLocDateUnit
+                image={locationIcon}
+                label="Drop-off:"
+                location={formData.dropLocation}
+              />
+            </div>
           </div>
-          <div className="flex flex-col items-center gap-5 xs:items-start">
+
+          <div className="flex flex-col items-center gap-5">
             <div className="text-lg font-medium">
               <h5>
                 Your car:
-                <span className="text-orange"> BMW 320 ModernLine</span>
+                <span className="text-orange"> {formData.carType}</span>
               </h5>
             </div>
             <div>
