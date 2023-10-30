@@ -11,12 +11,16 @@ const Booking = () => {
     pickLocation: "",
     dropLocation: "",
     pickDate: "",
-    dropDate: "", 
-  })
+    dropDate: "",
+  });
 
-  const handleFormSubmit = (data:FormValues) => {
+  const handleFormSubmit = (data: FormValues) => {
     setIsFormSubmitted(true);
-    setFormData(data)
+    setFormData(data);
+  };
+
+  const handleCloseReservation = () => {
+    setIsFormSubmitted(false);
   };
 
   useEffect(() => {
@@ -41,7 +45,12 @@ const Booking = () => {
           <Form onFormSubmit={handleFormSubmit} />
         </div>
       </div>
-      {isFormSubmitted && <ReservationComplete formData={formData} />}
+      {isFormSubmitted && (
+        <ReservationComplete
+          formData={formData}
+          onCloseReservation={handleCloseReservation}
+        />
+      )}
     </div>
   );
 };

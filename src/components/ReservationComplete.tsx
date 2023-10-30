@@ -4,32 +4,38 @@ import locationIcon from "../icons/location.png";
 import ReservationLocDateUnit from "./ReservationLocDateUnit";
 import ReservationField from "./ReservationField";
 import { FormValues } from "./Form";
+import arrow from "../icons/arrow-right.png";
 
 interface Props {
   formData: FormValues;
+  onCloseReservation: () => void;
 }
 
-const ReservationComplete = ({ formData }: Props) => {
+const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
   return (
     <div className="fixed top-0 z-50 flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.3)]">
       <div className="h-full w-full max-w-screen-lg overflow-y-scroll bg-white md:relative lg:top-10 lg:p-1 ">
-        <div className="flex justify-between bg-orange p-3">
+        <div className="flex items-center justify-between bg-orange p-3">
           <h3 className="text-xl font-medium text-white xs:text-2xl">
             Complete Reservation
           </h3>
-          <svg
-            className="w-6 text-white"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
+          <div
+            className="h-fit w-6 cursor-pointer text-white"
+            onClick={onCloseReservation}
           >
-            <path d="M18 6l-12 12"></path>
-            <path d="M6 6l12 12"></path>
-          </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M18 6l-12 12"></path>
+              <path d="M6 6l12 12"></path>
+            </svg>
+          </div>
         </div>
         <div className="bg-orangeLight p-5">
           <div className="mb-3 flex items-center gap-2 text-orange">
@@ -163,15 +169,27 @@ const ReservationComplete = ({ formData }: Props) => {
             />
             <div className="flex flex-col xs:col-span-2">
               <div className="flex items-center gap-2">
-                <input type="checkbox" />
+                <input type="checkbox" className="h-4 w-4" />
                 <p>Please send me latest news and updates</p>
               </div>
-              <div className="flex items-center justify-center  p-5">
+              <div className="flex flex-col items-center justify-center gap-5 p-5 xs:flex-row">
                 <button
-                  className="hover:opacity-8 rounded bg-orange px-7 py-4 font-medium text-white shadow-lg shadow-orangeShadow transition-all hover:bg-green-600"
+                  className="flex min-w-[155px] items-center gap-2 rounded bg-black px-7 py-4 text-white shadow-lg shadow-gray2 transition-all duration-300 hover:opacity-80"
+                  onClick={onCloseReservation}
+                  type="button"
+                >
+                  <img
+                    src={arrow}
+                    alt="arrow"
+                    className="mr-3 w-4 rotate-180"
+                  />
+                  Back
+                </button>
+                <button
+                  className="min-w-[155px] rounded bg-orange px-7 py-4 font-medium text-white shadow-lg shadow-orangeShadow transition-all duration-300 hover:bg-green-600 hover:opacity-80"
                   type="submit"
                 >
-                  Reserve now
+                  RESERVE NOW
                 </button>
               </div>
             </div>

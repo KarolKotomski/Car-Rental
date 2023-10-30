@@ -30,7 +30,6 @@ const Form = ({ onFormSubmit }: FormProps) => {
   const { errors } = formState;
 
   const onSubmit = (data: FormValues) => {
-    console.log("Form submitted", data);
     onFormSubmit(data);
   };
 
