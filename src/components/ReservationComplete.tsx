@@ -172,21 +172,17 @@ const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
                 <input type="checkbox" className="h-4 w-4" />
                 <p>Please send me latest news and updates</p>
               </div>
-              <div className="flex flex-col items-center justify-center gap-5 p-5 xs:flex-row">
+              <div className="flex flex-col items-center justify-center gap-5 p-10 xs:flex-row">
                 <button
-                  className="flex min-w-[155px] items-center gap-2 rounded bg-black px-7 py-4 text-white shadow-lg shadow-gray2 transition-all duration-300 hover:opacity-80"
+                  className="flex min-w-[172px] items-center gap-2 whitespace-nowrap rounded bg-black px-7 py-4 text-white shadow-lg shadow-gray2 transition-all duration-300 hover:opacity-80"
                   onClick={onCloseReservation}
                   type="button"
                 >
-                  <img
-                    src={arrow}
-                    alt="arrow"
-                    className="mr-3 w-4 rotate-180"
-                  />
-                  Back
+                  <img src={arrow} alt="arrow" className="w-3 rotate-180" />
+                  Change data
                 </button>
                 <button
-                  className="min-w-[155px] rounded bg-orange px-7 py-4 font-medium text-white shadow-lg shadow-orangeShadow transition-all duration-300 hover:bg-green-600 hover:opacity-80"
+                  className="min-w-[172px] whitespace-nowrap rounded bg-orange px-7 py-4 font-medium text-white shadow-lg shadow-orangeShadow transition-all duration-300 hover:bg-green-600 hover:shadow-none"
                   type="submit"
                 >
                   RESERVE NOW
