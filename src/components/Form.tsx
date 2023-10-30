@@ -21,8 +21,8 @@ interface FormProps {
 }
 
 const Form = ({ onFormSubmit }: FormProps) => {
-  /*Form management and resolving */
 
+  /*Form management and resolving */
   const form = useForm<FormValues>({
     resolver: yupResolver(schema),
   });

@@ -4,7 +4,7 @@ interface Props {
   register: object;
   options?: JSX.Element[];
   errors: string | undefined;
-  date?: boolean | undefined;
+  date?: boolean;
 }
 
 const FormField = ({

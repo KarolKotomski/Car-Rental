@@ -1,10 +1,10 @@
-import car from "../images/cars-big/audia1.jpg";
 import calendarIcon from "../icons/calendar.png";
 import locationIcon from "../icons/location.png";
 import ReservationLocDateUnit from "./ReservationLocDateUnit";
 import ReservationField from "./ReservationField";
 import { FormValues } from "./Form";
 import arrow from "../icons/arrow-right.png";
+import { vehicles } from "../data/AllData";
 
 interface Props {
   formData: FormValues;
@@ -12,6 +12,13 @@ interface Props {
 }
 
 const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
+  /* Car image finding */
+
+  const selectedCar = formData.carType;
+  const selectedVehicle = vehicles.find((vehicle) => {
+    return `${vehicle.brand} ${vehicle.model}` === selectedCar;
+  });
+
   return (
     <div className="fixed top-0 z-50 flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.3)]">
       <div className="h-full w-full max-w-4xl overflow-y-scroll bg-white md:relative lg:top-10 lg:p-1 ">
@@ -104,7 +111,11 @@ const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
               </h5>
             </div>
             <div>
-              <img src={car} alt="selected car" className="max-h-[210px]" />
+              <img
+                src={selectedVehicle?.image2}
+                alt="selected car"
+                className="max-h-[210px]"
+              />
             </div>
           </div>
         </div>
