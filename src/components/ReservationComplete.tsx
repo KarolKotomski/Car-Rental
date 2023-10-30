@@ -17,10 +17,8 @@ const ReservationComplete = ({
   onCloseReservation,
   onFinalSubmit,
 }: Props) => {
-  
-  
   /* Car image finding */
-  
+
   const selectedCar = formData.carType;
   const selectedVehicle = vehicles.find((vehicle) => {
     return `${vehicle.brand} ${vehicle.model}` === selectedCar;
@@ -130,7 +128,10 @@ const ReservationComplete = ({
           <h5 className="mb-8 text-center text-lg font-medium text-orange">
             Personal Information
           </h5>
-          <form className="grid grid-cols-1 gap-8 xs:grid-cols-2">
+          <form
+            className="grid grid-cols-1 gap-8 xs:grid-cols-2"
+            onSubmit={onFinalSubmit}
+          >
             <ReservationField
               label="First name"
               type="text"
@@ -200,7 +201,6 @@ const ReservationComplete = ({
                 <button
                   className="min-w-[172px] whitespace-nowrap rounded bg-orange px-7 py-4 font-medium text-white shadow-lg shadow-orangeShadow transition-all duration-300 hover:bg-green-600 hover:shadow-none"
                   type="submit"
-                  onClick={onFinalSubmit}
                 >
                   RESERVE NOW
                 </button>

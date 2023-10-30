@@ -1,5 +1,6 @@
 import { vehicles } from "../data/AllData";
 import { useState } from "react";
+import PickTechTable from "./PickTechTable";
 
 const Pick = () => {
   const [selectedVehicle, setSelectedVehicle] = useState(vehicles[0]);
@@ -47,49 +48,16 @@ const Pick = () => {
               <img src={selectedVehicle.image2} alt="selected car" />
             </div>
 
-            <div className="flex min-w-[250px] flex-col">
-              <div className="bg-orange px-4 py-1 text-center text-lg text-white">
-                <span className="text-2xl font-medium">
-                  {selectedVehicle.cost + " "}
-                </span>
-                / day
-              </div>
-              <div className="flex border-x-2 border-b-2 border-gray2 px-1 py-2 text-center">
-                <div className="w-1/2 border-r-2 border-gray2">Brand:</div>
-                <div className="w-1/2">{selectedVehicle.brand}</div>
-              </div>
-              <div className="flex border-x-2 border-b-2 border-gray2 px-1 py-2 text-center">
-                <div className="w-1/2 border-r-2 border-gray2">Model:</div>
-                <div className="w-1/2">{selectedVehicle.model}</div>
-              </div>
-              <div className="flex border-x-2 border-b-2 border-gray2 px-1 py-2 text-center">
-                <div className="w-1/2 border-r-2 border-gray2">Year:</div>
-                <div className="w-1/2">{selectedVehicle.year}</div>
-              </div>
-              <div className="flex border-x-2 border-b-2 border-gray2 px-1 py-2 text-center">
-                <div className="w-1/2 border-r-2 border-gray2">Doors:</div>
-                <div className="w-1/2">{selectedVehicle.doors}</div>
-              </div>
-              <div className="flex border-x-2 border-b-2 border-gray2 px-1 py-2 text-center">
-                <div className="w-1/2 border-r-2 border-gray2">AC:</div>
-                <div className="w-1/2">{selectedVehicle.ac}</div>
-              </div>
-              <div className="flex border-x-2 border-b-2 border-gray2 px-1 py-2 text-center">
-                <div className="w-1/2 border-r-2 border-gray2">
-                  Transmission:
-                </div>
-                <div className="w-1/2">{selectedVehicle.transmission}</div>
-              </div>
-              <div className="flex border-x-2 border-b-2 border-gray2 px-1 py-2 text-center">
-                <div className="w-1/2 border-r-2 border-gray2">Fuel:</div>
-                <div className="w-1/2">{selectedVehicle.fuel}</div>
-              </div>
-              <a href="#booking-section">
-                <button className="mt-5 w-full rounded bg-orange px-4 py-2 text-xl text-white shadow-lg shadow-orangeShadow transition-all duration-300 hover:opacity-80">
-                  Book now
-                </button>
-              </a>
-            </div>
+            <PickTechTable
+              cost={selectedVehicle.cost + " "}
+              brand={selectedVehicle.brand}
+              model={selectedVehicle.model}
+              year={selectedVehicle.year}
+              doors={selectedVehicle.doors}
+              ac={selectedVehicle.ac}
+              transmission={selectedVehicle.transmission}
+              fuel={selectedVehicle.fuel}
+            />
           </div>
         </div>
       </div>
