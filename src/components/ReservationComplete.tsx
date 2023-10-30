@@ -14,7 +14,7 @@ interface Props {
 const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
   return (
     <div className="fixed top-0 z-50 flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.3)]">
-      <div className="h-full w-full max-w-screen-lg overflow-y-scroll bg-white md:relative lg:top-10 lg:p-1 ">
+      <div className="h-full w-full max-w-4xl overflow-y-scroll bg-white md:relative lg:top-10 lg:p-1 ">
         <div className="flex items-center justify-between bg-orange p-3">
           <h3 className="text-xl font-medium text-white xs:text-2xl">
             Complete Reservation
@@ -72,18 +72,16 @@ const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
             <h5 className="text-center text-lg font-medium text-orange">
               Location & Date
             </h5>
-            <div className="grid grid-cols-1 items-center gap-8 xs:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 items-center gap-8 xs:grid-cols-2 sm:grid-cols-4 md:gap-0">
               <ReservationLocDateUnit
                 image={calendarIcon}
                 label="Pick-up:"
                 date={formData.pickDate}
-                type="time"
               />
               <ReservationLocDateUnit
                 image={calendarIcon}
                 label="Drop-off:"
                 date={formData.dropDate}
-                type="time"
               />
               <ReservationLocDateUnit
                 image={locationIcon}
