@@ -9,11 +9,18 @@ import { vehicles } from "../data/AllData";
 interface Props {
   formData: FormValues;
   onCloseReservation: () => void;
+  onFinalSubmit: () => void;
 }
 
-const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
+const ReservationComplete = ({
+  formData,
+  onCloseReservation,
+  onFinalSubmit,
+}: Props) => {
+  
+  
   /* Car image finding */
-
+  
   const selectedCar = formData.carType;
   const selectedVehicle = vehicles.find((vehicle) => {
     return `${vehicle.brand} ${vehicle.model}` === selectedCar;
@@ -21,7 +28,7 @@ const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
 
   return (
     <div className="fixed top-0 z-50 flex h-full w-full items-center justify-center bg-[rgba(0,0,0,0.3)]">
-      <div className="h-full w-full max-w-4xl overflow-y-scroll bg-white md:relative lg:top-10 lg:p-1 ">
+      <div className="h-full w-full max-w-screen-md overflow-y-scroll bg-white md:relative md:top-10 md:p-1 ">
         <div className="flex items-center justify-between bg-orange p-3">
           <h3 className="text-xl font-medium text-white xs:text-2xl">
             Complete Reservation
@@ -74,8 +81,8 @@ const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
             <li>A toll-free customer support number</li>
           </ul>
         </div>
-        <div className="grid grid-cols-1 gap-10 border-b p-8">
-          <div className="flex flex-col gap-5">
+        <div className="grid grid-cols-1 gap-14 border-b p-8">
+          <div className="flex flex-col gap-10">
             <h5 className="text-center text-lg font-medium text-orange">
               Location & Date
             </h5>
@@ -103,7 +110,7 @@ const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
             </div>
           </div>
 
-          <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-col items-center gap-10">
             <div className="text-lg font-medium">
               <h5>
                 Your car:
@@ -193,6 +200,7 @@ const ReservationComplete = ({ formData, onCloseReservation }: Props) => {
                 <button
                   className="min-w-[172px] whitespace-nowrap rounded bg-orange px-7 py-4 font-medium text-white shadow-lg shadow-orangeShadow transition-all duration-300 hover:bg-green-600 hover:shadow-none"
                   type="submit"
+                  onClick={onFinalSubmit}
                 >
                   RESERVE NOW
                 </button>

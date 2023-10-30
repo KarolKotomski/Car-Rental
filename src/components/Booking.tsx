@@ -2,10 +2,13 @@ import { useState, useEffect } from "react";
 import Form from "./Form";
 import ReservationComplete from "./ReservationComplete";
 import { FormValues } from "./Form";
+import CheckEmailNotification from "./CheckEmailNotification";
 
 const Booking = () => {
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [isFinalSubmit, setIsFinalSubmit] = useState(false);
 
+  //Initial form data values:
   const [formData, setFormData] = useState<FormValues>({
     carType: "",
     pickLocation: "",
@@ -14,6 +17,7 @@ const Booking = () => {
     dropDate: "",
   });
 
+  //Form state management:
   const handleFormSubmit = (data: FormValues) => {
     setIsFormSubmitted(true);
     setFormData(data);
@@ -23,6 +27,17 @@ const Booking = () => {
     setIsFormSubmitted(false);
   };
 
+  const handleFinalSubmit = () => {
+    setIsFinalSubmit(true);
+    setIsFormSubmitted(false);
+  };
+
+  const handleCloseNotification = () => {
+    setIsFinalSubmit(false);
+    setIsFormSubmitted(false);
+  };
+
+  //Hide vertical scrollbar on main page when modal is open:
   useEffect(() => {
     if (isFormSubmitted === true) {
       document.body.style.overflow = "hidden";
@@ -42,6 +57,11 @@ const Booking = () => {
               required
             </p>
           </div>
+
+          {isFinalSubmit && (
+            <CheckEmailNotification onClose={handleCloseNotification} />
+          )}
+
           <Form onFormSubmit={handleFormSubmit} />
         </div>
       </div>
@@ -49,6 +69,7 @@ const Booking = () => {
         <ReservationComplete
           formData={formData}
           onCloseReservation={handleCloseReservation}
+          onFinalSubmit={handleFinalSubmit}
         />
       )}
     </div>
