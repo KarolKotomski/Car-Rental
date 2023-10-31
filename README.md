@@ -12,7 +12,7 @@ This is the Car Rental website that allows user to rent cars for personal or bus
 
 ## Demo
 
-Live Demo:
+Live Demo:[CarRental](https://car-rental-kk.vercel.app/)
 
 ## Project Goals
 
