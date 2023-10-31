@@ -1,4 +1,4 @@
-![Car Rental](https://github.com/KarolKotomski/Car-Rental/assets/137051383/cd4c7eb5-5e00-4d81-860c-5e423a24cbe2)
+![Car Rental](https://github.com/KarolKotomski/Car-Rental/assets/137051383/7ed468c9-6620-4fc5-93ef-17610e8f6bb6)
 
 # Car Rental
 
