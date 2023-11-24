@@ -5,26 +5,26 @@ import { screen, render } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 describe("Faq Component", () => {
-  test("main header should render correctly", () => {
+  test("main header element should render correctly", () => {
     render(<Faq />);
-    const mainHeader = screen.getByRole("heading", {
+    const mainHeaderElement = screen.getByRole("heading", {
       level: 3,
     });
-    expect(mainHeader).toBeInTheDocument();
+    expect(mainHeaderElement).toBeInTheDocument();
   });
 
-  test("title header renders correctly", () => {
+  test("title header element renders correctly", () => {
     render(<Faq />);
-    const titleHeader = screen.getByRole("heading", { level: 2 });
-    expect(titleHeader).toBeInTheDocument();
+    const titleHeaderElement = screen.getByRole("heading", { level: 2 });
+    expect(titleHeaderElement).toBeInTheDocument();
   });
 
-  test("header paragraph renders correctly", () => {
+  test("header paragraph element renders correctly", () => {
     render(<Faq />);
-    const headerParagraph = screen.getByText(
+    const headerParagraphElement = screen.getByText(
       "Frequently Asked Questions about the car rental booking process on our website: Answers to common concerns and inquiries.",
     );
-    expect(headerParagraph).toBeInTheDocument();
+    expect(headerParagraphElement).toBeInTheDocument();
   });
 
   test("first question element renders correctly", () => {
@@ -69,5 +69,17 @@ describe("Faq Component", () => {
     expect(thirdAnswerElement).toBeInTheDocument();
   });
 
-  
+  test("all arrow button elements render correctly", () => {
+    render(<Faq />);
+    const arrowButtonElements = screen.getAllByRole("button");
+    arrowButtonElements.forEach((element) => {
+      expect(element).toBeInTheDocument();
+    });
+  });
+
+  test("arrow button elements quantity is equal to number of questions in the data array", () => {
+    render(<Faq />);
+    const arrowButtonElements = screen.getAllByRole("button");
+    expect(arrowButtonElements.length).toBe(faq.length);
+  });
 });
